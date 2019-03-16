@@ -11,7 +11,7 @@
 * [Consideraciones técnicas](#consideraciones-técnicas)
 * [Primeros pasos](#primeros-pasos)
 * [Contenido de referencia](#contenido-de-referencia)
-* [Checklist](#checklist)
+* [Proceso UX](#proceso-ux)
 
 ***
 
@@ -483,24 +483,24 @@ _Criterios de Aceptación_ y nosotros sí lo haremos. Más detalles en la guía.
 
 ***
 
-## Checklist
+## Proceso UX
 
-* [ ] Usa VanillaJS.
-* [ ] No hace uso de `this`.
-* [ ] Pasa linter (`npm run pretest`)
-* [ ] Pasa tests (`npm test`)
-* [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
-  lines y branches.
-* [ ] Incluye _Definición del producto_ clara e informativa en `README.md`.
-* [ ] Incluye historias de usuario en `README.md`.
-* [ ] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
-  `README.md`.
-* [ ] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
-  en `README.md`.
-* [ ] Incluye link a Zeplin en `README.md`.
-* [ ] Incluye el listado de problemas que detectaste a través de tests de
-  usabilidad en el `README.md`.
-* [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
-* [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
-* [ ] UI: Permite filtrar data en base a una condición.
-* [ ] UI: Es _responsive_.
+### Descubrimiento e investigación:
+
+![Descubrimiento](https://ibb.co/qnbKJbn)
+
+### Síntesis y definición:
+
+![Sintesis](https://ibb.co/x2jPnQ7)
+
+### Ideación:
+
+![Ideación](https://ibb.co/1T4RhD2)
+
+### Prototipado:
+
+![Prototipado](https://ibb.co/xftd6mV)
+
+### User Testing:
+
+![User Testing](https://ibb.co/y6Z0Lbb)
