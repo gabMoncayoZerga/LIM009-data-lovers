@@ -37,7 +37,7 @@
             <div class="contenedor-inputs">
               <input type="text" placeholder="Name" class="input-100" required>
               <input type="password" placeholder="Password" class="input-100" required>
-              <input type="button" class="input-100" value="Send">
+              <input type="button" class="input-100" value="Send" id="submit">
               </div>
           </form>
         </div>
@@ -53,15 +53,15 @@
       <button id="Btn_air">Aerea</button>
       <button id="Btn_maritime">Maritima</button>
       <button id="Btn_land">Terrestre</button>
-      <select name="order" id="select_order">
+      <select name="order" id="select-order">
         <option selected value="0"> Year </option>
         <option value="ascendente">Ascendente</option>
         <option value="descendente">Descendente</option>
       </select>
     </section>
-    <section id="year_section" class="slideshow-area">
+    <section id="year-section" class="slideshow-area">
       <h3>Or Search by Year:</h3>
-      <select id="selected_year" name="year" class="year_button">
+      <select id="select-year" name="year" class="year_button">
         <option selected value="0"> Year </option>
         <option class="year" value="2001-01-04">2001-01-04</option>
         <option class="year" value="2002-01-04">2002</option>
@@ -80,9 +80,9 @@
         <option class="year" value="2015">2015</option>
         <option class="year" value="2016">2016</option>
       </select>
-      <button class="search_button" id="search" name="visualize_data" value="visualize_data">Search</button>
+      <button class="search-button" id="search" name="visualize-data" value="visualize-data">Search</button>
     </section>
-    <section class="tableInfo">
+    <section class="tableInfo" id="air-injuries">
         <label class="subtitles"><strong>Air Injuries</strong></label>
         <article class="info">
           <h4>Lorem ipsum dolor sit amet consectetur adipiscing elit montes ornare purus</h4>
@@ -107,7 +107,7 @@
         <div class="chart_div">
         </div>
       </section>
-      <section class="tableInfo">
+      <section class="tableInfo" id="maritime-injuries">
           <label class="subtitles"><strong>Maritime Injuries</strong></label>
           <article class="info">
             <h4>Lorem ipsum dolor sit amet consectetur adipiscing elit montes ornare purus</h4>
@@ -132,7 +132,7 @@
           <div class="chart_div">
           </div>
         </section>
-        <section class="tableInfo">
+        <section class="tableInfo" id="land-injuries">
             <label class="subtitles"><strong>Land Injuries</strong></label>
             <article class="info">
               <h4>Lorem ipsum dolor sit amet consectetur adipiscing elit montes ornare purus</h4>
@@ -157,7 +157,7 @@
             <div class="chart_div">
             </div>
           </section>
-          <section id="galery">
+          <section id="news">
             <figure>
               <img src="" alt="foto1">
               <img src="" alt="foto2">
