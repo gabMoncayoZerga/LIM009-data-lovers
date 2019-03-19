@@ -489,6 +489,39 @@ _Criterios de Aceptación_ y nosotros sí lo haremos. Más detalles en la guía.
 
 ![Descubrimiento](https://i.ibb.co/yRLt4LR/68747470733a2f2f6c68352e676f6f676c6575736572636f6e74656e742e636f6d2f38376b6462483150664b4339413849696b384b73397a33736254677a4b4b7943505f44525548485539462d364654346c715155356341537237664d776f636466424746367a3162.png)
 
+Aquí consideramos realizar entrevistar a personas que pudiesen adaptarse al usuario final
+
+#### Historia de Usuario 1
+
+Yo como gerente de Seguridad de la alcaldía deseo acceder a una vista que me permit ver el total de accidentes que se dieron en un año específico.
+
+DEFINICIÓN DE TERMINADO.-
+
+#### Historia de Usuario 2
+
+Yo como gerente de Seguridad de la alcaldía deseo tener un formulario de registro para mantener la confidencialidad del acceso a información.
+
+DEFINICIÓN DE TERMINADO.- Crearemos una sección de LogIn en HTML que permita al usuario ingresar su nombre y una contraseña que defina y lo lleve a la vista que permite visualizar los datos.
+
+#### Historia de Usuario 3
+
+Yo como agente de Seguridad y salud en el trabajo deseo tener información actualizada sobre accidentes para prevenir futuras eventualidades.
+
+DEFINICIÓN DE TERMINADO.- Crearemos un section de noticias dentro de HTML que incluya noticias,links,etc. con información actualizada.
+
+#### Historia de Usuario 4
+
+Yo como gerente de Seguridad de la alcaldia deseo visualizar los tipos de accidentes que se suscitaron para mapear cuales son los mas comunes.
+
+DEFINICIÓN DE TERMINADO.- Crearemos la funcionalidad que permita , a través de un botón, mostrar accidentes por tipo con sus respectivos valores.
+
+#### Historia de Usuario 5
+
+Yo como gerente de Seguridad deseo poder ver como flúctua la cantidad de accidentes en un rango de años, cuando se dieron.
+
+DEFINICIÓN DE TERMINADO.-
+
+
 ### Síntesis y definición:
 
 ![Sintesis](https://i.ibb.co/Gd2BZj5/68747470733a2f2f6c68352e676f6f676c6575736572636f6e74656e742e636f6d2f6e51495046686a533751746d6a75705073444845386855524d5a52646f776b756f70714973574d475952365943644e52643365446c4448667a31314e5a364d4743704733696956.png)

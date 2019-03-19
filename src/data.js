@@ -94,7 +94,6 @@ const filterData = (data, condition) => {
   return resultado;
 }
 
-console.log(filterData(data,"Total_Injured_Persons_Railroad"));
 console.log(filterData(data,"Total_Injured_Persons_General_Aviation"));
 
 
