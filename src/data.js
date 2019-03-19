@@ -8,25 +8,14 @@
 // };
 
 // window.example = example; 
-
 const data = INJURIES;
-
-
-function FilterYear(){//filter
-  
-  let selectYear = document.getElementById("selected_year").value;
+//filtrar año
+function FilterYear(selectYear){//filter
     // return year==selectYear;//
     const dataYear = data.filter(dat => dat.Year === selectYear);//year
-
-console.log (dataYear);
+return dataYear;
   }
 
-const btnSearch = document.getElementById("search");
-//const btnMaritime =document.getElementById("Btn_maritime");
-//const btnLand =document.getElementById("Btn_land");
-
-btnSearch.addEventListener("click",FilterYear);
-//creo una funcion que mostrará la seccion aereo
 
 
 

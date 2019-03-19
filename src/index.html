@@ -29,12 +29,17 @@
         </ol>
       </nav>
     </header>
-    <section id="login">
-      <label for="">User</label><br>
-      <input id="user" type="text" required><br>
-      <label for="">Password</label><br>
-      <input type="text"required><br>
-      <button id="btn_enter">Enter</button>
+    <section id="login" class="formulario">
+        <form class="form-register">
+            <h2 class="form-titulo">Sing in</h2>
+            <div class="contenedor-inputs">
+              <label>Username</label>
+              <input id="username" type="text"class="input-100" required>
+              <label>Password</label>
+              <input type="password" class="input-100" required>
+              <button id="btn_enter" class="input-50">Enter</button>
+              </div>
+          </form>
     </section>
     <section id="home">
       <label id="name_user" for=""></label>
@@ -43,32 +48,44 @@
       </figure>
       <h1>Description</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipiscing elit montes ornare purus, libero morbi ultrices duis litora viverra fusce consequat. Scelerisque a quam inceptos laoreet ad purus feugiat suspendisse, habitasse natoque enim aenean nunc metus penatibus lacus sagittis, mollis at dui condimentum facilisis quisque taciti.</p>
-      <button id="Btn_train">train</button>
-      <button id="Btn_pedalcyclists">pedalcyclists</button>
-      <button id="Btn_motocyclists">motocyclists</button>
-      <button id="Btn_car">car</button>
-      <button id="Btn_bus">bus</button>
+      <button id="Btn_train">Train</button>
+      <button id="Btn_pedalcyclists">Pedalcyclists</button>
+      <button id="Btn_motocyclists">Motocyclists</button>
+      <button id="Btn_car">Car</button>
+      <button id="Btn_bus">Bus</button>
     </section>
     <section id="year_section" class="slideshow-area">
       <h3>Or Search by Year:</h3>
       <select id="selected_year" name="year" class="year_button">
         <option selected value="0"> Year </option>
-        <option class="year" value="2001-01-04">2001-01-04</option>
+        <option selected value="0"> Year </option>
+        <option class="year" value="1990-01-04">1990</option>
+        <option class="year" value="1991-01-04">1991</option>
+        <option class="year" value="1992-01-04">1992</option>
+        <option class="year" value="1993-01-04">1993</option>
+        <option class="year" value="1994-01-04">1994</option>
+        <option class="year" value="1995-01-04">1995</option>
+        <option class="year" value="1996-01-04">1996</option>
+        <option class="year" value="1997-01-04">1997</option>
+        <option class="year" value="1998-01-04">1998</option>
+        <option class="year" value="1999-01-04">1999</option>
+        <option class="year" value="2000-01-04">2000</option>
+        <option class="year" value="2001-01-04">2001</option>
         <option class="year" value="2002-01-04">2002</option>
-        <option class="year" value="2003">2003</option>
-        <option class="year" value="2004">2004</option>
-        <option class="year" value="2005">2005</option>
-        <option class="year" value="2006">2006</option>
-        <option class="year" value="2007">2007</option>
-        <option class="year" value="2008">2008</option>
-        <option class="year" value="2009">2009</option>
-        <option class="year" value="2010">2010</option>
-        <option class="year" value="2011">2011</option>
-        <option class="year" value="2012">2012</option>
-        <option class="year" value="2013">2013</option>
-        <option class="year" value="2014">2014</option>
-        <option class="year" value="2015">2015</option>
-        <option class="year" value="2016">2016</option>
+        <option class="year" value="2003-01-04">2003</option>
+        <option class="year" value="2004-01-04">2004</option>
+        <option class="year" value="2005-01-04">2005</option>
+        <option class="year" value="2006-01-04">2006</option>
+        <option class="year" value="2007-01-04">2007</option>
+        <option class="year" value="2008-01-04">2008</option>
+        <option class="year" value="2009-01-04">2009</option>
+        <option class="year" value="2010-01-04">2010</option>
+        <option class="year" value="2011-01-04">2011</option>
+        <option class="year" value="2012-01-04">2012</option>
+        <option class="year" value="2013-01-04">2013</option>
+        <option class="year" value="2014-01-04">2014</option>
+        <option class="year" value="2015-01-04">2015</option>
+        <option class="year" value="2016-01-04">2016</option>
       </select>
       <button class="search_button" id="search" name="visualize_data" value="visualize_data">Search</button>
     </section>

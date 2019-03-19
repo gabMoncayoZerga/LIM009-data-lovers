@@ -13,7 +13,7 @@ sectionLogin.classList.toggle("classShow");
 // sectionHome.classList.toggle("classShow");
 
 btnEnter.addEventListener("click",() => {
-    const user = document.getElementById("user").value;
+    const user = document.getElementById("username").value;
     if (user == ""){
         alert("please, enter your name");
       } else {
@@ -22,3 +22,13 @@ btnEnter.addEventListener("click",() => {
           sectionHome.classList.toggle("classShow");
          }
 });
+
+const btnSearch = document.getElementById("search");
+//creo un evento para que cumpla la funcion filtrar por año
+btnSearch.addEventListener("click",viewYearTable);
+
+function viewYearTable(){
+    let selectYear = document.getElementById("selected_year").value;
+    const arrayFilterYear = FilterYear(selectYear);
+    arrayFilterYear.forEach(function(i){console.log(i);})
+}
