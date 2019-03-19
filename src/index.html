@@ -30,28 +30,24 @@
       </nav>
     </header>
     <section id="login">
-      <label for="">Usser</label><br>
-      <input type="text" required><br>
+      <label for="">User</label><br>
+      <input id="user" type="text" required><br>
       <label for="">Password</label><br>
       <input type="text"required><br>
-      <button>Enter</button>
+      <button id="btn_enter">Enter</button>
     </section>
     <section id="home">
+      <label id="name_user" for=""></label>
       <figure>
         <img src="" alt="banner">
       </figure>
       <h1>Description</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipiscing elit montes ornare purus, libero morbi ultrices duis litora viverra fusce consequat. Scelerisque a quam inceptos laoreet ad purus feugiat suspendisse, habitasse natoque enim aenean nunc metus penatibus lacus sagittis, mollis at dui condimentum facilisis quisque taciti.</p>
-    </section>
-    <section id="category">
-      <button id="Btn_air">Aerea</button>
-      <button id="Btn_maritime">Maritima</button>
-      <button id="Btn_land">Terrestre</button>
-      <select name="order" id="select_order">
-        <option selected value="0"> Year </option>
-        <option value="ascendente">Ascendente</option>
-        <option value="descendente">Descendente</option>
-      </select>
+      <button id="Btn_train">train</button>
+      <button id="Btn_pedalcyclists">pedalcyclists</button>
+      <button id="Btn_motocyclists">motocyclists</button>
+      <button id="Btn_car">car</button>
+      <button id="Btn_bus">bus</button>
     </section>
     <section id="year_section" class="slideshow-area">
       <h3>Or Search by Year:</h3>
@@ -76,8 +72,13 @@
       </select>
       <button class="search_button" id="search" name="visualize_data" value="visualize_data">Search</button>
     </section>
-    <section class="tableInfo">
-        <label class="subtitles"><strong>Air Injuries</strong></label>
+    <section id="table_train" class="tableInfo">
+        <select name="order" id="select_order">
+            <option selected value="0"> order </option>
+            <option value="ascendente">Ascendente</option>
+            <option value="descendente">Descendente</option>
+          </select>
+        <label class="subtitles"><strong>train Injuries</strong></label>
         <article class="info">
           <h4>Lorem ipsum dolor sit amet consectetur adipiscing elit montes ornare purus</h4>
           <p>Lorem ipsum dolor sit amet consectetur adipiscing elit montes ornare purus, libero morbi ultrices duis litora viverra fusce consequat. Scelerisque a quam inceptos laoreet ad purus feugiat suspendisse, habitasse natoque enim aenean nunc metus penatibus lacus sagittis, mollis at dui condimentum facilisis quisque taciti..</p>
@@ -101,7 +102,12 @@
         <div class="chart_div">
         </div>
       </section>
-      <section class="tableInfo">
+      <section id="table_pedalcyclists" class="tableInfo">
+          <select name="order" id="select_order">
+              <option selected value="0"> Year </option>
+              <option value="ascendente">Ascendente</option>
+              <option value="descendente">Descendente</option>
+            </select>
           <label class="subtitles"><strong>Maritime Injuries</strong></label>
           <article class="info">
             <h4>Lorem ipsum dolor sit amet consectetur adipiscing elit montes ornare purus</h4>
@@ -126,7 +132,12 @@
           <div class="chart_div">
           </div>
         </section>
-        <section class="tableInfo">
+        <section id="table_motocyclists"class="tableInfo">
+            <select name="order" id="select_order">
+                <option selected value="0"> Year </option>
+                <option value="ascendente">Ascendente</option>
+                <option value="descendente">Descendente</option>
+              </select>
             <label class="subtitles"><strong>Land Injuries</strong></label>
             <article class="info">
               <h4>Lorem ipsum dolor sit amet consectetur adipiscing elit montes ornare purus</h4>
@@ -167,6 +178,5 @@
     <script src="./data/injuries/injuries.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
-    <script src="./data/injuries/newData.js"></script>
   </body>
 </html>

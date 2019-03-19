@@ -1,4 +1,4 @@
-body{
+/* body{
   margin: 0;
   font-family: sans-serif;
 }
@@ -42,4 +42,12 @@ h1{
 
 .input-100{
   width: 100%;
+} */
+section{ display: none;}
+
+.classHidden{
+  display:none; 
+}
+.classShow{
+  display: inline;
 }
