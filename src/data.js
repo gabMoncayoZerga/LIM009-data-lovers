@@ -1,19 +1,12 @@
 const data = INJURIES;
 
-function FilterYear(){//filter
-
-  let selectYear = document.getElementById("selected_year").value;
-    // return year==selectYear;//
-    const dataYear = data.filter(dat => dat.Year === selectYear);//year
-    console.log(dataYear);
+function FilterYear(selectYear){//filter
+  // return year==selectYear;//
+    const dataYear = data.filter(dat => dat.Year.substr(0,4)=== selectYear);//year
+    return dataYear;
   }
 
-const btnSearch = document.getElementById("search");
-//const btnMaritime =document.getElementById("Btn_maritime");
-//const btnLand =document.getElementById("Btn_land");
-
-btnSearch.addEventListener("click",FilterYear);
-
+// Filtrando data por tipo a lo largo de los años//
 const filterData = (data, condition) => {
   // aqui se guardará un objeto
   let resultado = [];
