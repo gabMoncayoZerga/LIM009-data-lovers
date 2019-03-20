@@ -1,4 +1,4 @@
-const data = INJURIES;
+const data = window.data;
 
 function FilterYear(selectYear){//filter
   // return year==selectYear;//
