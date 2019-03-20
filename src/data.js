@@ -12,8 +12,8 @@ const data = INJURIES;
 //filtrar año
 function FilterYear(selectYear){//filter
     // return year==selectYear;//
-    const dataYear = data.filter(dat => dat.Year === selectYear);//year
-return dataYear;
+    const dataYear = data.filter(dat => dat.Year.substr(0,4) === selectYear);//year
+  return dataYear;
   }
 
 
