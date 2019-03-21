@@ -45,7 +45,7 @@ const INJURIES = [
     Total_Injured_Persons_Truck_Occupants_Large: null,
     Total_Injured_Persons_Truck_Occupants_Light: null,
     Total_Injured_Persons_US_Air_Carrier: null,
-    Total_Injured_Persons_Water: null,
+    Total_Injure_Waterd_Persons: null,
     Total_Injured_Persons_Water_Not_Related_To_Vessel_Casualties: null,
     Total_Injured_Persons_Water_Vessel_Related: null,
     Year: "1960-01-04"
@@ -1683,3 +1683,4 @@ const INJURIES = [
     Year: "2016-01-04"
   }
 ];
+window.data= INJURIES;

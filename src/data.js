@@ -8,16 +8,30 @@
 // };
 
 // window.example = example; 
-const data = INJURIES;
+const data =window.data;
+
 //filtrar año
-function FilterYear(selectYear){//filter
+const FilterYear=(selectYear)=>{//filter
     // return year==selectYear;//
     const dataYear = data.filter(dat => dat.Year.substr(0,4) === selectYear);//year
-  return dataYear;
+    return dataYear;
   }
+const train = "Total_Injured_Persons_Railroad_Train_Accidents";  
+const car ="Total_Injured_Persons_Passenger_Car_Occupants";
+const pedalcyclists ="Total_Injured_Persons_Pedalcyclists";
+const bus = "Total_Injured_Persons_Bus_Occupants";
+const motorcyclists = "Total_Injured_Persons_Motorcyclists";
 
+//filtrar por categoria: train
 
-
-
-
+const showCategory=(Category) => {
+  let dataCategory = [];
+  data.forEach(function (dat) {
+    dataCategory.push(dat.train, dat.Year);
+  });
+  return dataCategory;
+}
+showCategory().forEach(function(element) {
+  console.log(element);
+});
 

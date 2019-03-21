@@ -1,21 +1,19 @@
 /* Manejo del DOM */
 const btnEnter = document.getElementById("btn_enter");
-// const train = document.getElementById("btn_train");
-// const pedalcyclists = document.getElementById("btn_pedacyclists");
-// const motorcyclist = document.getElementById("btn_motorcyclists");
-// const car = document.getElementById("btn_car");
-// const bus = document.getElementById("btn_bus");
-const tablaTrain = document.getElementById("table_train");
-const tablapedalcyclists = document.getElementById("table_pedalcyclists");
-const tablaMotocyclists = document.getElementById("table_motocyclists");
-const tablaCar = document.getElementById("table_car");
-const tablaBus = document.getElementById("table_bus");
-
-
-
+const btnTrain = document.getElementById("btn_train");
+const btnPedalcyclists = document.getElementById("btn_pedacyclists");
+const btnMotorcyclist = document.getElementById("btn_motorcyclists");
+const btnCar = document.getElementById("btn_car");
+const btnBus = document.getElementById("btn_bus");
+const tableTrain = document.getElementById("table_train");
+const tablepedalcyclists = document.getElementById("table_pedalcyclists");
+const tableMotocyclists = document.getElementById("table_motocyclists");
+const tableCar = document.getElementById("table_car");
+const tableBus = document.getElementById("table_bus");
 const sectionLogin = document.getElementById("login");
 const sectionHome = document.getElementById("home");
 const sectionFilterYear= document.getElementById("year_section");
+
 
 sectionLogin.classList.toggle("classShow");
 // sectionHome.classList.toggle("classShow");
@@ -31,7 +29,6 @@ btnEnter.addEventListener("click",() => {
           sectionFilterYear.classList.toggle("classShow");
          }
 });
-
 const btnSearch = document.getElementById("search");
 //creo un evento para que cumpla la funcion filtrar por año
 btnSearch.addEventListener("click",viewYearTable);
@@ -43,11 +40,10 @@ function viewYearTable(){
     arrayFilterYear.forEach(function(i){
         const tableYear= document.getElementById("table_year");
         //console.log(i);
-        tableYear.innerHTML="<td>Train:</td> <td>"+i.Total_Injured_Persons_Railroad_Train_Accidents+"</td>";
-        tableYear.innerHTML="<td>Pedalcyclists:</td> <td>"+i.Total_Injured_Persons_Pedalcyclists+"</td>";
-        tableYear.innerHTML="<td>Motocyclists:</td> <td>"+i.Total_Injured_Persons_Motorcyclists+"</td>";
-        tableYear.innerHTML="<td>Car:</td> <td>"+i.Total_Injured_Persons_Passenger_Car_Occupants+"</td>";
-        tableYear.innerHTML="<td>Bus:</td> <td>"+i.Total_Injured_Persons_Railroad_Train_Accidents+"</td>";
-        
+        tableYear.innerHTML="<td>Train :</td>" +"<td>"+i.Total_Injured_Persons_Railroad_Train_Accidents+"</td>";
+        tableYear.innerHTML+="<td>Pedalcyclists:</td>" +"<td>"+i.Total_Injured_Persons_Pedalcyclists+"</td>";
+        tableYear.innerHTML+="<td>Motocyclists:</td>" +"<td>"+i.Total_Injured_Persons_Motorcyclists+"</td>";
+        tableYear.innerHTML+="<td>Car:</td>" +"<td>"+i.Total_Injured_Persons_Passenger_Car_Occupants+"</td>";
+        tableYear.innerHTML+="<td>Bus:</td>" +"<td>"+i.Total_Injured_Persons_Railroad_Train_Accidents+"</td>"; 
     })
 }
