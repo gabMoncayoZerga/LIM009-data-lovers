@@ -1,4 +1,8 @@
+
+//NARDA
+
 const data = window.data;
+
 
 function FilterYear(selectYear){//filter
   // return year==selectYear;//
@@ -6,25 +10,27 @@ function FilterYear(selectYear){//filter
     return dataYear;
   }
 
-// Filtrando data por tipo a lo largo de los años//
-const filterData = (data, condition) => {
-  // aqui se guardará un objeto
-  let resultado = [];
 
-  data.forEach(elemento => {
+//GABRIELA
+  // Filtrando data por tipo a lo largo de los años//
+  const filterData = (data, condition) => {
+    // aqui se guardará un objeto
+    let resultado = [];
 
-    //se obtiene el valor del arreglo dada la condicion
-  const value = elemento[condition];
-  const year = elemento.Year;
+    data.forEach(elemento => {
 
-   const data = { year: year, value: value };
+      //se obtiene el valor del arreglo dada la condicion
+    const value = elemento[condition];
+    const year = elemento.Year;
 
-    //se añade al objeto resultado
-    resultado.push(data);
+     const data = { year: year, value: value };
 
-  });
+      //se añade al objeto resultado
+      resultado.push(data);
 
-  return resultado;
-}
+    });
 
-console.log(filterData(data,"Total_Injured_Persons_General_Aviation"));
+    return resultado;
+  }
+
+  console.log(filterData(data,"Total_Injured_Persons_Railroad_Train_Accidents"));

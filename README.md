@@ -58,19 +58,7 @@ le ayude a interactuar y entender mejor esos datos.
 
 Estos son datos que te proponemos:
 
-* [Indicadores de desarrollo del Banco Mundial](src/data/worldbank/worldbank.json)
-  de algunos países (Brasil, Chile, México y Perú). Estos datos incluyen
-  indicadores demográficos, económicos y comerciales.
-* [Pokémon](src/data/pokemon/pokemon.json):
-  En este set encontrarás una lista con los 151 Pokémon de la región de Kanto,
-  junto con sus respectivas estadísticas usadas en el juego [Pokémon GO](pokemongolive.com).
-* [Steam noticias](src/data/steam/steam.json):
-  Lista noticias relacionadas a los videojuegos presentes en la
-  plataforma de [Steam](https://store.steampowered.com/).
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este set de datos muestra la lista de jugadores en una liga del
-  juego League of Legends (LoL), puedes revisar la documentación de su API en
-  este [link](https://developer.riotgames.com/api-methods/).
+
 * [Personas heridas por medio de transporte en EEUU](src/data/injuries/injuries.json).
   Este set nos muestra el número de personas heridas en accidentes de
   transporte, con data anual desde 1960 y categorizada por tipo de transporte
@@ -489,37 +477,31 @@ _Criterios de Aceptación_ y nosotros sí lo haremos. Más detalles en la guía.
 
 ![Descubrimiento](https://i.ibb.co/yRLt4LR/68747470733a2f2f6c68352e676f6f676c6575736572636f6e74656e742e636f6d2f38376b6462483150664b4339413849696b384b73397a33736254677a4b4b7943505f44525548485539462d364654346c715155356341537237664d776f636466424746367a3162.png)
 
-Aquí consideramos realizar entrevistar a personas que pudiesen adaptarse al usuario final
+Ya qyue nuestro usuario final debe residir en EEUU, las entrevistas se realizaron a personas que esten relacionadas con Sector Público y Seguridad y Salud en el trabajo.
 
 #### Historia de Usuario 1
 
-Yo como gerente de Seguridad de la alcaldía deseo acceder a una vista que me permit ver el total de accidentes que se dieron en un año específico.
+Yo como gerente de Seguridad de la alcaldía deseo acceder a una vista que me permita observar el total de accidentes que se dieron en un año en específico.
 
-DEFINICIÓN DE TERMINADO.-
+DEFINICIÓN DE TERMINADO.- Implementaremos un botón que permita seleccionar el año deseado y muestre en la web la relación de los tipos de de accidentes que se dieron en ese periodo de tiempo.
 
 #### Historia de Usuario 2
 
 Yo como gerente de Seguridad de la alcaldía deseo tener un formulario de registro para mantener la confidencialidad del acceso a información.
 
-DEFINICIÓN DE TERMINADO.- Crearemos una sección de LogIn en HTML que permita al usuario ingresar su nombre y una contraseña que defina y lo lleve a la vista que permite visualizar los datos.
+DEFINICIÓN DE TERMINADO.- Crearemos una sección de LogIn en HTML que permita al usuario ingresar su username que defina y lo lleve a la pantalla que permite visualizar los datos.
 
 #### Historia de Usuario 3
 
 Yo como agente de Seguridad y salud en el trabajo deseo tener información actualizada sobre accidentes para prevenir futuras eventualidades.
 
-DEFINICIÓN DE TERMINADO.- Crearemos un section de noticias dentro de HTML que incluya noticias,links,etc. con información actualizada.
+DEFINICIÓN DE TERMINADO.- Crearemos un section de noticias dentro de HTML que incluya noticias,links,etc. con información actualizada sobre accidentes.
 
 #### Historia de Usuario 4
 
 Yo como gerente de Seguridad de la alcaldia deseo visualizar los tipos de accidentes que se suscitaron para mapear cuales son los mas comunes.
 
-DEFINICIÓN DE TERMINADO.- Crearemos la funcionalidad que permita , a través de un botón, mostrar accidentes por tipo con sus respectivos valores.
-
-#### Historia de Usuario 5
-
-Yo como gerente de Seguridad deseo poder ver como flúctua la cantidad de accidentes en un rango de años, cuando se dieron.
-
-DEFINICIÓN DE TERMINADO.-
+DEFINICIÓN DE TERMINADO.- Crearemos la funcionalidad que permita , a través de un botón, mostrar accidentes por tipo con sus respectivos valores a lo largo del rango de años brindado por la data.
 
 
 ### Síntesis y definición:
@@ -537,3 +519,5 @@ DEFINICIÓN DE TERMINADO.-
 ### User Testing:
 
 ![User Testing](https://i.ibb.co/Mctnq33/68747470733a2f2f6c68352e676f6f676c6575736572636f6e74656e742e636f6d2f516c6c4b34714236755a74673659464d7269514b6770674c524f36676e4e623148383865425a5f372d475576576c655a3147665872453842674664457951526770324f4d356247.png)
+
+1) El primer user testing se realizó mostrando un Prototipo de baja fidelidad al usuario. Hubo comprensión de primer momento al recorrer el

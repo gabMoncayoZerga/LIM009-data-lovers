@@ -1,4 +1,4 @@
-/* MANEJO DEL DOM */
+/* Manejo del DOM */
 const btnEnter = document.getElementById("btn_enter");
 // const train = document.getElementById("btn_train");
 // const pedalcyclists = document.getElementById("btn_pedacyclists");
@@ -10,6 +10,9 @@ const tablapedalcyclists = document.getElementById("table_pedalcyclists");
 const tablaMotocyclists = document.getElementById("table_motocyclists");
 const tablaCar = document.getElementById("table_car");
 const tablaBus = document.getElementById("table_bus");
+const comeback=document.getElementById("comeback");
+
+
 const sectionLogin = document.getElementById("login");
 const sectionHome = document.getElementById("home");
 const sectionFilterYear= document.getElementById("year_section");
@@ -28,6 +31,7 @@ btnEnter.addEventListener("click",() => {
           sectionFilterYear.classList.toggle("classShow");
          }
 });
+
 const btnSearch = document.getElementById("search");
 //creo un evento para que cumpla la funcion filtrar por año
 btnSearch.addEventListener("click",viewYearTable);
@@ -47,3 +51,7 @@ function viewYearTable(){
 
     })
 }
+
+comeback.addEventListener("click",()=>{
+  
+})
