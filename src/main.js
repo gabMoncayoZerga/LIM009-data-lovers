@@ -32,6 +32,15 @@ btnEnter.addEventListener("click",() => {
          }
 });
 
+
+comeback.addEventListener("click",()=>{
+  sectionLogin.classList.toggle("classShow");
+  sectionHome.classList.toggle("classShow");
+  sectionFilterYear.classList.toggle("classShow");
+  comeback.classList.toogle("classShow");
+})
+
+
 const btnSearch = document.getElementById("search");
 //creo un evento para que cumpla la funcion filtrar por año
 btnSearch.addEventListener("click",viewYearTable);
@@ -51,7 +60,3 @@ function viewYearTable(){
 
     })
 }
-
-comeback.addEventListener("click",()=>{
-  
-})

@@ -516,8 +516,14 @@ DEFINICIÓN DE TERMINADO.- Crearemos la funcionalidad que permita , a través de
 
 ![Prototipado](https://i.ibb.co/wwFj4JD/68747470733a2f2f6c68342e676f6f676c6575736572636f6e74656e742e636f6d2f4f30766134675364496e576134692d32674c674970615442436141656f4665716a7463314f715674534a707671566d6d34766e4334356a7a594e6b6653374a456e524a5930354a.png)
 
+*Prototipo de baja fidelidad* : fue realizado en lapiz y papel, considerando solo dos vistas : logIn(pantalla de inicio)y Home(pantalla donde se muestra la data)
+
+
+*Prototipo de alta fidelidad* : se adjuntan los links 
+
 ### User Testing:
 
 ![User Testing](https://i.ibb.co/Mctnq33/68747470733a2f2f6c68352e676f6f676c6575736572636f6e74656e742e636f6d2f516c6c4b34714236755a74673659464d7269514b6770674c524f36676e4e623148383865425a5f372d475576576c655a3147665872453842674664457951526770324f4d356247.png)
 
-1) El primer user testing se realizó mostrando un Prototipo de baja fidelidad al usuario. Hubo comprensión de primer momento al recorrer el
+1) El primer user testing se realizó mostrando un Prototipo de baja fidelidad al usuario. Hubo comprensión de primer momento al recorrer el flujo , pero el feedbback que tenían los usuarios en común era que deseaban ver la data de manera detallada , es decir por categorías en lugar de ser mostrada en su totalidad en una sola vista.
+Ante ello se adicionó 5 botones que permitan filtrar la data por tipo de accidente y que sea mostrada.
