@@ -35,7 +35,7 @@ const btnSearch = document.getElementById("search");
 btnSearch.addEventListener("click",viewYearTable);
 
 
-
+//FUNCION PARA MOSTRAR LA DATA POR AÑOS//
 function viewYearTable(){
     let selectYear = document.getElementById("selected_year").value;
     const arrayFilterYear = FilterYear(selectYear);
