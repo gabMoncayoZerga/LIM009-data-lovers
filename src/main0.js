@@ -1,21 +1,17 @@
 /* Manejo del DOM */
 const btnEnter = document.getElementById("btn_enter");
-const train = document.getElementById("btn_train");
-// const pedalcyclists = document.getElementById("btn_pedacyclists");
-// const motorcyclist = document.getElementById("btn_motorcyclists");
-// const car = document.getElementById("btn_car");
-// const bus = document.getElementById("btn_bus");
 const tablaTrain = document.getElementById("table_train");
-const tablapedalcyclists = document.getElementById("table_pedalcyclists");
 const tablaMotocyclists = document.getElementById("table_motocyclists");
 const tablaCar = document.getElementById("table_car");
 const tablaBus = document.getElementById("table_bus");
-
-
-
 const sectionLogin = document.getElementById("login");
 const sectionHome = document.getElementById("home");
-const sectionFilterYear= document.getElementById("year_section");
+//const sectionFilterYear= document.getElementById("year_section");
+
+//const sectionFilterpedalcyclists= document.getElementById("pedalcyclists");
+//const sectionFiltemotocyclists= document.getElementById("motocyclists");
+//const sectionFiltercar= document.getElementById("car");
+//const sectionFilterbus= document.getElementById("bus");
 
 sectionLogin.classList.toggle("classShow");
 // sectionHome.classList.toggle("classShow");
@@ -28,7 +24,7 @@ btnEnter.addEventListener("click",() => {
           document.getElementById("name_user").innerHTML = user;
           sectionLogin.classList.toggle("classShow");
           sectionHome.classList.toggle("classShow");
-          sectionFilterYear.classList.toggle("classShow");
+          //sectionFilterYear.classList.toggle("classShow");
          }
 });
 
@@ -45,42 +41,41 @@ function viewYearTable(){
     arrayFilterYear.forEach(function(i){
         const tableYear= document.getElementById("table_year");
         //console.log(i);
-        tableYear.innerHTML="<td>Train:</td> <td>"+i.Total_Injured_Persons_Railroad_Train_Accidents+"</td>";
+
+        tableYear.innerHTML="";
+        tableYear.innerHTML+="<td>Train:</td> <td>"+i.Total_Injured_Persons_Railroad_Train_Accidents+"</td>";
         tableYear.innerHTML+="<td>Pedalcyclists:</td> <td>"+i.Total_Injured_Persons_Pedalcyclists+"</td>";
         tableYear.innerHTML+="<td>Motocyclists:</td> <td>"+i.Total_Injured_Persons_Motorcyclists+"</td>";
         tableYear.innerHTML+="<td>Car:</td> <td>"+i.Total_Injured_Persons_Passenger_Car_Occupants+"</td>";
         tableYear.innerHTML+="<td>Bus:</td> <td>"+i.Total_Injured_Persons_Bus_Occupants9+"</td>";
-
     })
 }
 
-//Para ver detalle de TRAIN
+//FUNCION PARA MOSTRAR TABLA POR CATEGORIA //
 
-function viewTableDet(valor,nombre_tabla){
+function viewTableDet(seccion,valor,nombreTabla){
+  document.getElementById(seccion).classList.toggle("classShow");
   //console.log(valor);
   //console.log(nombre_tabla);
-    const arrayResultado = filterData(valor);//valor es niombre de indicador
-        //console.log(arrayResultado);
-    const tableHTML= document.getElementById(nombre_tabla);
-    tableHTML.innerHTML="";// aca limpio la tabla , para luego cargarla con el array de resultado, cada vez que yo hago clic en  el boton correspondiente limpia la tabla para que cargue el valor de indicador difetente
-    let cadenaHtml='';
+    const arrayResultado = filterData(valor);
+    //console.log(arrayResultado);
+    const tableHTML= document.getElementById(nombreTabla);
+    tableHTML.innerHTML="";
+    var cadena_html='';
     arrayResultado.forEach(function(i){
-        cadenaHtml += "<tr><td>"+i.year+"</td> <td>"+i.value+"</td></tr>";
+        cadena_html += "<tr><td>"+i.year+"</td> <td>"+i.value+"</td></tr>";
         //tableHTML.innerHTML+="<td>"+i.accidents+"</td><td>"+i.year+"</td> <td>"+i.value+"</td>";
-
     })
   //  console.log(cadena_html);
-    tableHTML.innerHTML= cadenaHtml;
+    tableHTML.innerHTML= cadena_html;
 }
 
 const btnTrainSearch = document.getElementById("Btn_train_search");
 btnTrainSearch.addEventListener("click", () => {
-  viewTableDet("Total_Injured_Persons_Railroad_Train_Accidents","show_table_train")
+  viewTableDet("train","Total_Injured_Persons_Railroad_Train_Accidents","show_table_train")
 });
 
-/*
-const showTrain = function () {
-  tablaTrain.addEventListener
-  fila.insertCell(0).innerHTML=
-  fila.insertCell(1).innerHTML=Total_Injured_Persons_Railroad_Train_Accidents;
-}*/
+const btnPedacyclistsSearch=document.getElementById("Btn_pedalcyclists_search");
+btnPedacyclistsSearch.addEventListener("click", () => {
+  viewTableDet("pedalcyclists","Total_Injured_Persons_Pedalcyclists","show_table_pedalcyclist")
+});
