@@ -1,17 +1,12 @@
-/* Manejo de data */
 
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
 
-// const example = () => {
-//   return 'example';
-// };
 
-// window.example = example; 
+//NARDA
+// window.example = example;
 const data =window.data;
 
 //filtrar año
-const FilterYear=(selectYear)=>{//filter
+const FilterYear = (selectYear)=>{//filter
     // return year==selectYear;//
     const dataYear = data.filter(dat => dat.Year.substr(0,4) === selectYear);//year
     return dataYear;

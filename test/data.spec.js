@@ -4,13 +4,9 @@ require('../src/data');
 require('./data.spec.js');
 
 
-describe('example', () => {
-  
-  it('debería ser una función', () => {
-    assert.equal(typeof example, 'function');
-  });
 
-  it('debería retornar "example"', () => {
-    assert.equal(example(), 'example');
+describe('injuries', () => {
+  it('debería de ser un objeto', () => {
+    expect(typeof injuries).toBe('object');
   });
-})
+});

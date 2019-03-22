@@ -73,12 +73,17 @@ label, input{
   margin-bottom: 5px;
 }
 /*ocultar y mostrar pantallas*/
-section{ 
+section{
   display: none;}
 
 .classHidden{
-  display:none; 
+  display:none;
 }
+
+.input-50{
+  width: 50%;
+}
+
 .classShow{
   display: inline;
 }
