@@ -1,5 +1,5 @@
 
-console.log(INJURIES);
+
 
 //NARDA
 // window.example = example;
