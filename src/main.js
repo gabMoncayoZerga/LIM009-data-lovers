@@ -18,7 +18,8 @@ const motorcyclists = "Total_Injured_Persons_Motorcyclists";
 sectionLogin.classList.toggle("classShow");
 // sectionHome.classList.toggle("classShow");
 
-btnEnter.addEventListener("click",() => {
+btnEnter.addEventListener("click",(e) => {
+    e.preventDefault();
     const user = document.getElementById("username").value;
     if (user == ""){
         alert("please, enter your name");
@@ -26,7 +27,7 @@ btnEnter.addEventListener("click",() => {
           document.getElementById("name_user").innerHTML = user;
           sectionLogin.classList.toggle("classShow");
           sectionHome.classList.toggle("classShow");
-          sectionFilterYear.classList.toggle("classShow");
+          //sectionFilterYear.classList.toggle("classShow");
          }
 });
 const btnSearch = document.getElementById("search");
