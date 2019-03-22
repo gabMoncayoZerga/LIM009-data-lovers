@@ -42,27 +42,37 @@
       </form>
     </section>
     <section id="home">
+        <figure>
+            <img src="" alt="usuario">
+          </figure>
       <label id="name_user"></label>
       <figure>
         <img src="" alt="banner">
       </figure>
       <h1>Description</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipiscing elit montes ornare purus, libero morbi ultrices duis litora viverra fusce consequat. Scelerisque a quam inceptos laoreet ad purus feugiat suspendisse, habitasse natoque enim aenean nunc metus penatibus lacus sagittis, mollis at dui condimentum facilisis quisque taciti.</p>
-      <button id="Btn_train">Train</button>
-      <button id="Btn_pedalcyclists">Pedalcyclists</button>
-      <button id="Btn_motocyclists">Motocyclists</button>
-      <button id="Btn_car">Car</button>
-      <button id="Btn_bus">Bus</button>
+      <button id="btn_train">Train</button>
+      <button id="btn_pedalcyclists">Pedalcyclists</button>
+      <button id="btn_motocyclists">Motocyclists</button>
+      <button id="btn_car">Car</button>
+      <button id="btn_bus">Bus</button>
       <table class="tableStructure">
-          <thead>
-            <tr>
-              <td>Year</td>
-              <td>Injuries</td>
-            </tr>
-          </thead>
-          <tbody id="table_category" class="dataTable">
-          </tbody>
-        </table>
+        <thead>
+          <tr>
+            <td>Year</td>
+            <td>Injuries</td>
+          </tr>
+        </thead>
+        <tbody id="table_category" class="dataTable">
+        </tbody>
+      </table>
+      <div class="table">
+        <select id="select_order" name="order">
+          <option selected value="0"> order </option>
+          <option value="ascendente">Ascendente</option>
+          <option value="descendente">Descendente</option>
+        </select>
+      </div>
     </section>
     <section id="year_section" class="slideshow-area">
       <h3>Or Search by Year:</h3>
@@ -117,24 +127,6 @@
             <img alt="Dibujo train Accidents" />
         </figure>    
       </article>
-      <div class="table">
-        <select name="order" id="select_order">
-          <option selected value="0"> order </option>
-          <option value="ascendente">Ascendente</option>
-          <option value="descendente">Descendente</option>
-        </select>
-        <table class="tableStructure">
-          <thead>
-            <tr>
-              <td>Accidents</td>
-              <td>Year</td>
-              <td>Total Injuries</td>
-            </tr>
-          </thead>
-          <tbody id="table_train" class="dataTable">
-          </tbody>
-        </table>
-      </div>
     </section>
     <section id="pedalcyclists" class="tableInfo">
       <label class="subtitles"><strong>Maritime Injuries</strong></label>
@@ -145,24 +137,6 @@
           <img alt="Dibujo pedalcyclists Accidents" />
         </figure>    
       </article>
-        <div class="table">
-          <select name="order" id="select_order">
-            <option selected value="0"> Year </option>
-            <option value="ascendente">Ascendente</option>
-            <option value="descendente">Descendente</option>
-          </select>
-          <table class="tableStructure">
-            <thead>
-              <tr>
-                <td>Accidents</td>
-                <td>Year</td>
-                <td>Total Injuries</td>
-              </tr>
-            </thead>
-            <tbody id="table_pedalcyclists" class="dataTable">
-            </tbody>
-          </table>
-          </div>
     </section>
     <section id="motocyclists"class="tableInfo">
       <label class="subtitles"><strong>Land Injuries</strong></label>
@@ -173,24 +147,6 @@
               <img alt="Dibujo motocyclists Accidents" />
           </figure>    
       </article>
-      <div class="table">
-        <select name="order" id="select_order">
-          <option selected value="0"> Year </option>
-          <option value="ascendente">Ascendente</option>
-          <option value="descendente">Descendente</option>
-        </select>
-          <table class="tableStructure">
-            <thead>
-              <tr>
-                <td>Accidents</td>
-                <td>Year</td>
-                <td>Total Injuries</td>
-              </tr>
-              </thead>
-              <tbody id="table_motocyclists" class="dataTable">
-              </tbody>
-          </table>
-      </div>
     </section>
     <section id="car"class="tableInfo">
       <label class="subtitles"><strong>Land Injuries</strong></label>
@@ -201,24 +157,6 @@
           <img alt="Dibujo motocyclists Accidents" />
         </figure>    
       </article>
-      <div class="table">
-        <select name="order" id="select_order">
-          <option selected value="0"> Year </option>
-          <option value="ascendente">Ascendente</option>
-          <option value="descendente">Descendente</option>
-        </select>
-        <table class="tableStructure">
-          <thead>
-            <tr>
-              <td>Accidents</td>
-              <td>Year</td>
-              <td>Total Injuries</td>
-              </tr>
-          </thead>
-          <tbody id="table_car" class="dataTable">
-          </tbody>
-        </table>
-      </div>
     </section>
     <section id="bus"class="tableInfo">
       <label class="subtitles"><strong>Land Injuries</strong></label>
@@ -229,24 +167,6 @@
           <img alt="Dibujo motocyclists Accidents" />
         </figure>    
       </article>
-      <div class="table">
-        <select name="order" id="select_order">
-          <option selected value="0"> Year </option>
-          <option value="ascendente">Ascendente</option>
-          <option value="descendente">Descendente</option>
-        </select>
-        <table class="tableStructure">
-          <thead>
-            <tr>
-              <td>Accidents</td>
-              <td>Year</td>
-              <td>Total Injuries</td>
-            </tr>
-          </thead>
-          <tbody id="table_bus" class="dataTable">
-          </tbody>
-        </table>
-      </div>
     </section>
     <section id="galery">
       <figure>

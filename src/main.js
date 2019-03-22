@@ -5,14 +5,14 @@ const btnPedalcyclists = document.getElementById("btn_pedacyclists");
 const btnMotorcyclist = document.getElementById("btn_motorcyclists");
 const btnCar = document.getElementById("btn_car");
 const btnBus = document.getElementById("btn_bus");
-const tableTrain = document.getElementById("table_train");
-const tablepedalcyclists = document.getElementById("table_pedalcyclists");
-const tableMotocyclists = document.getElementById("table_motocyclists");
-const tableCar = document.getElementById("table_car");
-const tableBus = document.getElementById("table_bus");
 const sectionLogin = document.getElementById("login");
 const sectionHome = document.getElementById("home");
 const sectionFilterYear= document.getElementById("year_section");
+const train = "Total_Injured_Persons_Railroad_Train_Accidents";  
+const car ="Total_Injured_Persons_Passenger_Car_Occupants";
+const pedalcyclists ="Total_Injured_Persons_Pedalcyclists";
+const bus = "Total_Injured_Persons_Bus_Occupants";
+const motorcyclists = "Total_Injured_Persons_Motorcyclists";
 
 
 sectionLogin.classList.toggle("classShow");
@@ -46,4 +46,16 @@ function viewYearTable(){
         tableYear.innerHTML+="<td>Car:</td>" +"<td>"+i.Total_Injured_Persons_Passenger_Car_Occupants+"</td>";
         tableYear.innerHTML+="<td>Bus:</td>" +"<td>"+i.Total_Injured_Persons_Railroad_Train_Accidents+"</td>"; 
     })
+}
+//creo un evento para que cumpla la funcion filtrar por categoria
+btnTrain.addEventListener("click",viewCategory);
+
+function viewCategory(){
+    document.getElementById("train").classList.toggle("classShow");
+    sectionFilterYear.classList.toggle("classShow");
+    showCategory().forEach(function(a) {
+        const tableCategory = document.getElementById("table_category");
+        tableCategory.innerHTML+= "<td>"+a.Year+"</td>" +"<td>"+a.Injures+"</td>";
+      });
+
 }

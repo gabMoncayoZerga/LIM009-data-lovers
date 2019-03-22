@@ -16,22 +16,17 @@ const FilterYear=(selectYear)=>{//filter
     const dataYear = data.filter(dat => dat.Year.substr(0,4) === selectYear);//year
     return dataYear;
   }
-const train = "Total_Injured_Persons_Railroad_Train_Accidents";  
-const car ="Total_Injured_Persons_Passenger_Car_Occupants";
-const pedalcyclists ="Total_Injured_Persons_Pedalcyclists";
-const bus = "Total_Injured_Persons_Bus_Occupants";
-const motorcyclists = "Total_Injured_Persons_Motorcyclists";
 
 //filtrar por categoria: train
 
-const showCategory=(Category) => {
+const showCategory=() => {
   let dataCategory = [];
   data.forEach(function (dat) {
-    dataCategory.push(dat.train, dat.Year);
+    dataCategory.push({Injures:dat.Total_Injured_Persons_Railroad_Train_Accidents, Year: dat.Year});
   });
   return dataCategory;
 }
-showCategory().forEach(function(element) {
-  console.log(element);
-});
 
+showCategory().forEach(function(a) {
+  console.log(a);
+});
