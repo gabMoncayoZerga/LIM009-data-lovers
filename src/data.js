@@ -22,6 +22,6 @@ const showCategory=() => {
   return dataCategory;
 }
 
-showCategory().forEach(function(a){
-  console.log(a);
-})
+// showCategory().forEach(function(a) {
+//   console.log(a);
+// });
