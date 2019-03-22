@@ -1683,9 +1683,4 @@ const INJURIES = [
     Year: "2016-01-04"
   }
 ];
-<<<<<<< HEAD
-
 window.data = INJURIES
-=======
-window.data= INJURIES;
->>>>>>> 5f95b472b34813a86c38d56c9ffa05fc4482490c

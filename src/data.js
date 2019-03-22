@@ -1,15 +1,12 @@
 
+console.log(INJURIES);
+
 //NARDA
-
-const data = window.data;
-
-
-
 // window.example = example;
 const data =window.data;
 
 //filtrar año
-const FilterYear=(selectYear)=>{//filter
+const FilterYear = (selectYear)=>{//filter
     // return year==selectYear;//
     const dataYear = data.filter(dat => dat.Year.substr(0,4) === selectYear);//year
     return dataYear;
@@ -25,6 +22,6 @@ const showCategory=() => {
   return dataCategory;
 }
 
-showCategory().forEach(function(a) {
+showCategory().forEach(function(a){
   console.log(a);
-});
+})
