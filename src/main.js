@@ -77,10 +77,3 @@ const btnTrainSearch = document.getElementById("Btn_train_search");
 btnTrainSearch.addEventListener("click", () => {
   viewTableDet("Total_Injured_Persons_Railroad_Train_Accidents","show_table_train")
 });
-
-/*
-const showTrain = function () {
-  tablaTrain.addEventListener
-  fila.insertCell(0).innerHTML=
-  fila.insertCell(1).innerHTML=Total_Injured_Persons_Railroad_Train_Accidents;
-}*/

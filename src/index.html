@@ -6,6 +6,7 @@
       <link rel="stylesheet" href="style.css" />
    </head>
    <body>
+     <!-- SECCION HEADER -->
       <header>
          <div>
             <figure>
@@ -14,21 +15,22 @@
          </div>
          <nav>
             <ol>
-               <li>
+               <ul>
                   <a href="#login">Login</a>
-               </li>
-               <li>
+               </ul>
+               <ul>
                   <a href="#home">Home</a>
-               </li>
-               <li>
+               </ul>
+               <ul>
                   <a href="#category">Filter</a>
-               </li>
-               <li>
+               </ul>
+               <ul>
                   <a href="#galery">Galery</a>
-               </li>
+               </ul>
             </ol>
          </nav>
       </header>
+      <!-- SECCION LOGIN -->
       <section id="login" class="formulario">
          <form class="form-register">
             <h2 class="form-titulo">Sing in</h2>
@@ -41,6 +43,7 @@
             </div>
          </form>
       </section>
+      <!-- SECCION HOME -->
       <section id="home">
          <label id="name_user" for=""></label>
          <figure>
@@ -50,10 +53,33 @@
          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit montes ornare purus, libero morbi ultrices duis litora viverra fusce consequat. Scelerisque a quam inceptos laoreet ad purus feugiat suspendisse, habitasse natoque enim aenean nunc metus penatibus lacus sagittis, mollis at dui condimentum facilisis quisque taciti.</p>
          <button id="Btn_train_search">Train</button>
          <button id="Btn_pedalcyclists_search">Pedalcyclists</button>
-         <button id="Btn_motocyclists">Motocyclists</button>
-         <button id="Btn_car">Car</button>
-         <button id="Btn_bus">Bus</button>
+         <button id="Btn_motocyclists_search">Motocyclists</button>
+         <button id="Btn_car_search">Car</button>
+         <button id="Btn_bus_search">Bus</button>
       </section>
+      <!-- TABLE TRAIN -->
+    <table class="tableStructure">
+       <thead>
+          <tr>
+             <td>Year</td>
+             <td>Total Injuries</td>
+          </tr>
+       </thead>
+       <tbody  id="show_table_train" class="dataTable">
+       </tbody>
+    </table>
+    <!-- TABLE PEDALCYCLIST-->
+    <table id="table_pedalcyclists" class="tableStructure">
+       <thead>
+          <tr>
+             <td>Year</td>
+             <td>Total Injuries</td>
+          </tr>
+       </thead>
+       <tbody id="show_table_pedalcyclist" class="dataTable">
+       </tbody>
+    </table>
+    <!-- SELECT DE AÑO -->
       <section id="year_section" class="slideshow-area">
          <h3>Or Search by Year:</h3>
          <select id="selected_year" name="year" class="year_button">
@@ -97,18 +123,7 @@
             <tbody id="table_year" class="dataTable">
             </tbody>
          </table>
-         <hr>
-         <table class="tableStructure">
-            <thead>
-               <tr>
-                  <td>Year</td>
-                  <td>Total Injuries</td>
-               </tr>
-            </thead>
-            <tbody  id="show_table_train" class="dataTable">
-            </tbody>
-         </table>
-      </section>
+         </section>
       <section id="train" class="tableInfo">
          <label class="subtitles"><strong>train Injuries</strong></label>
          <article class="info">
@@ -134,17 +149,7 @@
                <option value="ascendente">Ascendente</option>
                <option value="descendente">Descendente</option>
             </select>
-            <table id="table_pedalcyclists" class="tableStructure">
-               <thead>
-                  <tr>
-                     <td>Year</td>
-                     <td>Total Injuries</td>
-                  </tr>
-               </thead>
-               <tbody id="show_table_pedalcyclist" class="dataTable">
-               </tbody>
-            </table>
-         </div>
+        </div>
       </section>
       <section id="motocyclists"class="tableInfo">
          <label class="subtitles"><strong>Land Injuries</strong></label>
@@ -155,25 +160,7 @@
                <img alt="Dibujo motocyclists Accidents" />
             </figure>
          </article>
-         <div class="table">
-            <select name="order" id="select_order">
-               <option selected value="0"> Year </option>
-               <option value="ascendente">Ascendente</option>
-               <option value="descendente">Descendente</option>
-            </select>
-            <table id="table_motocyclists" class="tableStructure">
-               <thead>
-                  <tr>
-                     <td>Accidents</td>
-                     <td>Year</td>
-                     <td>Total Injuries</td>
-                  </tr>
-               </thead>
-               <tbody class="dataTable">
-               </tbody>
-            </table>
-         </div>
-      </section>
+        </section>
       <section id="car" class="tableInfo">
          <label class="subtitles"><strong>Land Injuries</strong></label>
          <article class="info">
@@ -183,25 +170,7 @@
                <img alt="Dibujo motocyclists Accidents" />
             </figure>
          </article>
-         <div class="table">
-            <select name="order" id="select_order">
-               <option selected value="0"> Year </option>
-               <option value="ascendente">Ascendente</option>
-               <option value="descendente">Descendente</option>
-            </select>
-            <table id="table_car" class="tableStructure">
-               <thead>
-                  <tr>
-                     <td>Accidents</td>
-                     <td>Year</td>
-                     <td>Total Injuries</td>
-                  </tr>
-               </thead>
-               <tbody class="dataTable">
-               </tbody>
-            </table>
-         </div>
-      </section>
+        </section>
       <section id="bus"class="tableInfo">
          <label class="subtitles"><strong>Land Injuries</strong></label>
          <article class="info">
@@ -211,26 +180,7 @@
                <img alt="Dibujo motocyclists Accidents" />
             </figure>
          </article>
-         <div class="table">
-            <select name="order" id="select_order">
-               <option selected value="0"> Year </option>
-               <option value="ascendente">Ascendente</option>
-               <option value="descendente">Descendente</option>
-            </select>
-            <table id="table_bus" class="tableStructure">
-               <thead>
-                  <tr>
-                     <td>Accidents</td>
-                     <td>Year</td>
-                     <td>Total Injuries</td>
-                  </tr>
-               </thead>
-               <tbody class="dataTable">
-               </tbody>
-            </table>
-         </div>
-      </section>
-
+        </section>
       <section id="galery">
          <figure>
             <img src="" alt="foto1">
