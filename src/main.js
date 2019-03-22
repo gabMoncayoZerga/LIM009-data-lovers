@@ -27,7 +27,7 @@ btnEnter.addEventListener("click",(e) => {
           document.getElementById("name_user").innerHTML = user;
           sectionLogin.classList.toggle("classShow");
           sectionHome.classList.toggle("classShow");
-          sectionFilterYear.classList.toggle("classShow");
+          //sectionFilterYear.classList.toggle("classShow");
          }
 });
 const btnSearch = document.getElementById("search");
