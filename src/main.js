@@ -1,7 +1,7 @@
 /*Manejo del DOM*/
 const btnTrain = document.getElementById("btn_train");
 const btnEnter = document.getElementById("btn_enter");
-const btnPedalcyclists = document.getElementById("btn_pedacyclists");
+const btnPedalcyclists = document.getElementById("btn_pedalcyclists");
 const btnMotorcyclist = document.getElementById("btn_motorcyclists");
 const btnCar = document.getElementById("btn_car");
 const btnBus = document.getElementById("btn_bus");
@@ -52,13 +52,24 @@ function viewYearTable(){
     })}
 
 //creo un evento para que cumpla la funcion filtrar por categoria
-btnTrain.addEventListener("click",viewCategory);
 
-function viewCategory(){
-    document.getElementById("train").classList.toggle("classShow");
+
+function viewCategory(idCategory, categoryName){
+    document.getElementById(idCategory).classList.toggle("classShow");
+
+     const data = showCategory(categoryName);
     sectionFilterYear.classList.toggle("classShow");
-    showCategory().forEach(function(a) {
-        const tableCategory = document.getElementById("table_category");
+    const tableCategory = document.getElementById("table_category");
+     tableCategory.innerHTML = "";
+    data.forEach(function(a) {
         tableCategory.innerHTML+= "<td>"+a.Year+"</td>" +"<td>"+a.Injures+"</td>";
       });
 }
+
+btnTrain.addEventListener("click",function(){
+  viewCategory("train",train);
+});
+
+btnPedalcyclists.addEventListener("click",function(){
+  viewCategory("pedalcyclists",pedalcyclists);
+});

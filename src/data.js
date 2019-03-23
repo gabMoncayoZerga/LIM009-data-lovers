@@ -12,16 +12,16 @@ const FilterYear = (selectYear)=>{//filter
     return dataYear;
   }
 
-//filtrar por categoria: train
-
-const showCategory=() => {
+//filtrar por categoria
+const showCategory=(category) => {
   let dataCategory = [];
   data.forEach(function (dat) {
-    dataCategory.push({Injures:dat.Total_Injured_Persons_Railroad_Train_Accidents, Year: dat.Year});
+
+   const value = dat[category];
+   const year= dat.Year;
+    dataCategory.push({Injures:value, Year: year});
   });
   return dataCategory;
 }
 
-// showCategory().forEach(function(a) {
-//   console.log(a);
-// });
+//window.showCategory = showCategory;
