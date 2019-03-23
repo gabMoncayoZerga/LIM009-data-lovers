@@ -2,7 +2,7 @@
 const btnTrain = document.getElementById("btn_train");
 const btnEnter = document.getElementById("btn_enter");
 const btnPedalcyclists = document.getElementById("btn_pedalcyclists");
-const btnMotorcyclist = document.getElementById("btn_motorcyclists");
+const btnMotorcyclist = document.getElementById("btn_motocyclists");
 const btnCar = document.getElementById("btn_car");
 const btnBus = document.getElementById("btn_bus");
 const sectionLogin = document.getElementById("login");
@@ -55,6 +55,7 @@ function viewYearTable(){
 
 
 function viewCategory(idCategory, categoryName){
+
     document.getElementById(idCategory).classList.toggle("classShow");
 
      const data = showCategory(categoryName);
@@ -66,10 +67,23 @@ function viewCategory(idCategory, categoryName){
       });
 }
 
+
 btnTrain.addEventListener("click",function(){
-  viewCategory("train",train);
+  viewCategory("train",train);// seccion HTML , constante con el string que tiene le nombre del indicador
 });
 
 btnPedalcyclists.addEventListener("click",function(){
   viewCategory("pedalcyclists",pedalcyclists);
+});
+
+btnMotorcyclist.addEventListener("click",function(){
+  viewCategory("motocyclists",motorcyclists);
+});
+
+btnCar.addEventListener("click",function(){
+  viewCategory("car",car);
+});
+
+btnBus.addEventListener("click",function(){
+  viewCategory("bus",bus);
 });
