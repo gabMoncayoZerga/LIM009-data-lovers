@@ -68,6 +68,29 @@ h1{
   display: block;
   }
 
+/*ESTILO DE FOOTER */
+  footer{
+    margin-top:150px;
+    width:100%;
+    height:100px;
+    background-color:#95a5a6;
+    text-align: center;
+    }
+/* CSS PARA LINKS DE REDES SOCIALES*/
+    #social-links{
+      margin-top: 15px;
+    }
+
+    .slink {
+      display: inline;
+      padding: 12px;
+    }
+
+    .img-icon{
+      width: 30px;
+      height: 27px;
+    }
+
 label, input{
   width: 100%;
   margin-bottom: 5px;
