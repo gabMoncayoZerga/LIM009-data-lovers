@@ -16,6 +16,7 @@ const bus = "Total_Injured_Persons_Bus_Occupants";
 
 
 sectionLogin.classList.toggle("classShow");
+/*footer.classList.toogle("classShow");¨*/
 // sectionHome.classList.toggle("classShow");
 
 btnEnter.addEventListener("click",(e) => {
@@ -26,6 +27,7 @@ btnEnter.addEventListener("click",(e) => {
       } else {
           document.getElementById("name_user").innerHTML = user;
           sectionLogin.classList.toggle("classShow");
+        /*  footer.classList.toogle("classShow");*/
           sectionHome.classList.toggle("classShow");
           //sectionFilterYear.classList.toggle("classShow");
          }
@@ -33,7 +35,6 @@ btnEnter.addEventListener("click",(e) => {
 const btnSearch = document.getElementById("search");
 //creo un evento para que cumpla la funcion filtrar por año
 btnSearch.addEventListener("click",viewYearTable);
-
 
 //FUNCION PARA MOSTRAR LA DATA POR AÑOS//
 function viewYearTable(){

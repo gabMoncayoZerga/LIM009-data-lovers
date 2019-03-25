@@ -13,7 +13,7 @@ const FilterYear = (selectYear)=>{//filter
 const showCategory=(category) => {
   let dataCategory = [];
   data.forEach(function (dat) {
-
+    
    const value = dat[category];
    const year= dat.Year;
     dataCategory.push({Injures:value, Year: year});

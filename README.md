@@ -56,9 +56,6 @@ Una vez que definas tu área de interés, buscar entender quién es tu usuario
 y qué necesita saber o ver exactamente; luego podrás construir la interfaz que
 le ayude a interactuar y entender mejor esos datos.
 
-Estos son datos que te proponemos:
-
-
 * [Personas heridas por medio de transporte en EEUU](src/data/injuries/injuries.json).
   Este set nos muestra el número de personas heridas en accidentes de
   transporte, con data anual desde 1960 y categorizada por tipo de transporte
@@ -436,23 +433,6 @@ Cuando ya estés lista para codear, te sugerimos empezar de esta manera:
 * Investigación con usuarios / entrevistas
 * Principios de diseño visual
 
-### Desarrollo Front-end
-
-* Unidad de testing en curso de JavaScript en LMS.
-* Unidad de arreglos en curso de JavaScript en LMS.
-* Unidad de objetos en curso de JavaScript en LMS.
-* Unidad de funciones en curso de JavaScript en LMS.
-* Unidad de DOM en curso de Browser JavaScript en LMS.
-* [Array en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array)
-* [Array.sort en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/sort)
-* [Array.map en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/map)
-* [Array.filter en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/filter)
-* [Array.reduce en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/reduce)
-* [Array.forEach en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/forEach)
-* [Object.keys en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/keys)
-* [Object.entries en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object/entries)
-* [Fetch API en MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
-* [json.org](https://json.org/json-es.html)
 
 ### Herramientas
 
@@ -519,7 +499,7 @@ DEFINICIÓN DE TERMINADO.- Crearemos la funcionalidad que permita , a través de
 *Prototipo de baja fidelidad* : fue realizado en lapiz y papel, considerando solo dos vistas : logIn(pantalla de inicio)y Home(pantalla donde se muestra la data)
 
 
-*Prototipo de alta fidelidad* : se adjuntan los links 
+*Prototipo de alta fidelidad* : se adjuntan los links
 
 ### User Testing:
 
