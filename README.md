@@ -81,6 +81,7 @@ DEFINICIÓN DE TERMINADO.- Crearemos un section de galería dentro de HTML que f
 ![propotipo de baja](https://user-images.githubusercontent.com/47749039/54940932-b90d7180-4ef9-11e9-9f88-a218acc558a6.png)
 
 *Prototipo de alta fidelidad* : se adjuntan los links
+![propotipo de baja](https://user-images.githubusercontent.com/47749039/54941652-62a13280-4efb-11e9-8ca2-7a7eb8602948.png)
 
 ### User Testing:
 
