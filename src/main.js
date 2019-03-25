@@ -74,20 +74,24 @@ btnTrain.addEventListener("click",function(){
 
 //LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA PEDALCYCLIST//
 btnPedalcyclists.addEventListener("click",function(){
-  viewCategory("pedalcyclists",pedalcyclists);
+    document.getElementById("train").classList.toggle("classShow");
+    viewCategory("pedalcyclists",pedalcyclists);
 });
 
 //LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA MOTORCYCLIST//
 btnMotorcyclist.addEventListener("click",function(){
-  viewCategory("motocyclists",motorcyclists);
+    document.getElementById("pedalcyclists").classList.toggle("classShow");
+    viewCategory("motocyclists",motorcyclists);
 });
 
 //LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA CAR//
 btnCar.addEventListener("click",function(){
-  viewCategory("car",car);
+    document.getElementById("motocyclists").classList.toggle("classShow");
+    viewCategory("car",car);
 });
 
 //LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA BUS//
 btnBus.addEventListener("click",function(){
-  viewCategory("bus",bus);
+    document.getElementById("car").classList.toggle("classShow");
+    viewCategory("bus",bus);
 });
