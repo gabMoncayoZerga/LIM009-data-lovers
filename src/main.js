@@ -63,7 +63,7 @@ function viewCategory(idCategory, categoryName){
     const tableCategory = document.getElementById("table_category");
     tableCategory.innerHTML = "";
     data.forEach(function(a) {
-        tableCategory.innerHTML+= "<td>"+a.Year+"</td>" +"<td>"+a.Injures+"</td>";
+        tableCategory.innerHTML+= "<td>"+a.Year+"</td>" +"<td>"+a.Injuries+"</td>";
       });
 }
 

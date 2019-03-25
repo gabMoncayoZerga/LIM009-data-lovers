@@ -13,10 +13,10 @@ const FilterYear = (selectYear)=>{//filter
 const showCategory=(category) => {
   let dataCategory = [];
   data.forEach(function (dat) {
-    
-   const value = dat[category];
+
+   const value = dat[category]==null?0:dat[category];
    const year= dat.Year;
-    dataCategory.push({Injures:value, Year: year});
+    dataCategory.push({Injuries:value, Year: year});
   });
   return dataCategory;
 }
