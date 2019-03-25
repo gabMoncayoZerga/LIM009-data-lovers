@@ -13,9 +13,11 @@ const pedalcyclists ="Total_Injured_Persons_Pedalcyclists";
 const motorcyclists = "Total_Injured_Persons_Motorcyclists";
 const car ="Total_Injured_Persons_Passenger_Car_Occupants";
 const bus = "Total_Injured_Persons_Bus_Occupants";
-
-
+const sectionFooter = document.getElementById("footer");
 sectionLogin.classList.toggle("classShow");
+sectionFooter.classList.toggle("classHidden");
+
+
 /*footer.classList.toogle("classShow");¨*/
 // sectionHome.classList.toggle("classShow");
 
@@ -51,8 +53,6 @@ function viewYearTable(){
         tableYear.innerHTML+="<td>Bus:</td> <td>"+i.Total_Injured_Persons_Bus_Occupants+"</td>";
 
     })}
-
-
 //CREAMOS A LA FUNCION VIEWCATEGORY PARA MOSTRAR CATEGORIAS LLAMANDO A showCategory DESDE DATA.JS//
 function viewCategory(idCategory, categoryName){
 
