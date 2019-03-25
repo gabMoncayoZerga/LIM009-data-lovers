@@ -16,7 +16,7 @@ Cada día generamos 2.5 trillones de bytes de datos, una cifra sin precedentes.
 
 Transportation Security Administration es una web pensada para uso en el sector público, pero de acceso privado que muestra el número de personas heridas en los accidentes por medio de transporte : tren, bicicleta,motocicleta, auto y bus.
 
-Cuenta con data anual desde 1960 hasta 2016 y cuenta con una interfaz amigable 
+Cuenta con data anual desde 1960 hasta 2016 y cuenta con una interfaz amigable
 
 ## Resumen del proyecto
 
@@ -92,5 +92,6 @@ Ante ello se adicionó 5 botones que permitan filtrar la data por tipo de accide
 2)
 ## Diagrama de Flujo
 
+Se realizó el digrama de flujo del proyecto en la plataforma web Lucidchart.
 
-https://i.ibb.co/GMMp2Vd/Diagrama-SIPOC.png
+![Diagrama de Flujo](https://i.ibb.co/GMMp2Vd/Diagrama-SIPOC.png)
