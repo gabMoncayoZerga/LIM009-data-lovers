@@ -9,10 +9,10 @@ const sectionLogin = document.getElementById("login");
 const sectionHome = document.getElementById("home");
 const sectionFilterYear= document.getElementById("year_section");
 const train = "Total_Injured_Persons_Railroad_Train_Accidents";
-const car ="Total_Injured_Persons_Passenger_Car_Occupants";
 const pedalcyclists ="Total_Injured_Persons_Pedalcyclists";
-const bus = "Total_Injured_Persons_Bus_Occupants";
 const motorcyclists = "Total_Injured_Persons_Motorcyclists";
+const car ="Total_Injured_Persons_Passenger_Car_Occupants";
+const bus = "Total_Injured_Persons_Bus_Occupants";
 
 
 sectionLogin.classList.toggle("classShow");
@@ -51,39 +51,42 @@ function viewYearTable(){
 
     })}
 
-//creo un evento para que cumpla la funcion filtrar por categoria
 
-
+//CREAMOS A LA FUNCION VIEWCATEGORY PARA MOSTRAR CATEGORIAS LLAMANDO A showCategory DESDE DATA.JS//
 function viewCategory(idCategory, categoryName){
 
     document.getElementById(idCategory).classList.toggle("classShow");
 
-     const data = showCategory(categoryName);
+    const data = showCategory(categoryName);
     sectionFilterYear.classList.toggle("classShow");
     const tableCategory = document.getElementById("table_category");
-     tableCategory.innerHTML = "";
+    tableCategory.innerHTML = "";
     data.forEach(function(a) {
         tableCategory.innerHTML+= "<td>"+a.Year+"</td>" +"<td>"+a.Injures+"</td>";
       });
 }
 
-
+//LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA TRAIN//
 btnTrain.addEventListener("click",function(){
   viewCategory("train",train);// seccion HTML , constante con el string que tiene le nombre del indicador
 });
 
+//LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA PEDALCYCLIST//
 btnPedalcyclists.addEventListener("click",function(){
   viewCategory("pedalcyclists",pedalcyclists);
 });
 
+//LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA MOTORCYCLIST//
 btnMotorcyclist.addEventListener("click",function(){
   viewCategory("motocyclists",motorcyclists);
 });
 
+//LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA CAR//
 btnCar.addEventListener("click",function(){
   viewCategory("car",car);
 });
 
+//LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA BUS//
 btnBus.addEventListener("click",function(){
   viewCategory("bus",bus);
 });

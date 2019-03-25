@@ -1,6 +1,3 @@
-
-
-
 //NARDA
 // window.example = example;
 const data =window.data;

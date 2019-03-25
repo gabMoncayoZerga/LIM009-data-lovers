@@ -68,6 +68,31 @@ h1{
   display: block;
   }
 
+  footer{
+    margin-top:150px;
+    width:100%;
+    height:100px;
+    background-color:#95a5a6;
+    text-align: center;
+    }
+
+    #social-links{
+      margin-top: 15px;
+    }
+
+    .slink {
+      display: inline;
+      padding: 12px;
+    }
+
+    .slink a {
+      text-decoration: none;
+    }
+
+    .img-icon{
+      width: 47px;
+      height: 43px;
+    }
 label, input{
   width: 100%;
   margin-bottom: 5px;
