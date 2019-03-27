@@ -1,13 +1,11 @@
 const data = INJURIES;
 
-const FilterYear = (data,selectYear)=>{//filter
-    // return year==selectYear;//
-    //const dataYear = data.filter(compareYear(selectYear));//year
+const filterByYear = (data,selectYear)=>{
     const dataYear = data.filter(dat=>dat.Year.substr(0,4)===selectYear)
     return dataYear;
   }
 
-//filtrar por categoria
+
 const showCategory=(category) => {
   let dataCategory = [];
   data.forEach(function (dat) {
@@ -17,21 +15,17 @@ const showCategory=(category) => {
   });
   return dataCategory;
 }
+console.log(showCategory);
+/*
+const sortData= (data, sortBy, sortOrder)=>{
 
+}
 
-// let orderAscendente = data.sort(function(a, b){
-const orderAscendente=() => {
-  const dataFilter = window.dataFilter;
-  const listOrdered = dataFilter.sort(function(a, b){
-    if (a.Year > b.Year) {
-      return 1;
-    } else if (a.Year < b.Year) {
-      return -1;
-    } else if (a.Year === b.Year) {
-      return 0;
-    }
-  })
-  return listOrdered;
-};
+/*const computeStats= (data) =>{
+máximo y minimo
+}*/
 
-//window.showCategory = showCategory;
+window.filterYear= filterByYear;
+window.showCategory = showCategory;
+//window.sortData=sortData;
+//window.computeStats=computeStats;
