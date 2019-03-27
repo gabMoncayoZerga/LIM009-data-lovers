@@ -77,10 +77,11 @@ DEFINICIÓN DE TERMINADO.- Crearemos un section de galería dentro de HTML que f
 
 ![Prototipado](https://i.ibb.co/wwFj4JD/68747470733a2f2f6c68342e676f6f676c6575736572636f6e74656e742e636f6d2f4f30766134675364496e576134692d32674c674970615442436141656f4665716a7463314f715674534a707671566d6d34766e4334356a7a594e6b6653374a456e524a5930354a.png)
 
-*Prototipo de baja fidelidad* : fue realizado en lapiz y papel, considerando solo dos vistas : logIn(pantalla de inicio)y Home(pantalla donde se muestra la data)
-
+*Prototipo de baja fidelidad* : fue realizado en sketch, considerando solo dos vistas : logIn(pantalla de inicio)y Home(pantalla donde se muestra la data)
+![propotipo de baja](https://user-images.githubusercontent.com/47749039/54940932-b90d7180-4ef9-11e9-9f88-a218acc558a6.png)
 
 *Prototipo de alta fidelidad* : se adjuntan los links
+![propotipo de baja](https://user-images.githubusercontent.com/47749039/54941652-62a13280-4efb-11e9-8ca2-7a7eb8602948.png)
 
 ### User Testing:
 
