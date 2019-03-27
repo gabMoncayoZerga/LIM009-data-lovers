@@ -18,10 +18,6 @@ const sectionFooter = document.querySelector("footer");
 sectionLogin.classList.toggle("classShow");
 sectionFooter.classList.toggle("classHidden");
 
-
-/*footer.classList.toogle("classShow");¨*/
-// sectionHome.classList.toggle("classShow");
-
 btnEnter.addEventListener("click",(e) => {
     e.preventDefault();
     const user = document.getElementById("username").value;
@@ -35,15 +31,12 @@ btnEnter.addEventListener("click",(e) => {
           sectionFilterYear.classList.toggle("classShow");
          }
 });
-
-
-//FUNCION PARA MOSTRAR LA DATA POR AÑOS//
-function viewYearTable(){
+btnSearch.addEventListener("click",(viewYearTable)=>{
     const data = INJURIES;
     let selectYear = document.getElementById("selected_year").value;
     const arrayFilterYear = FilterYear(data, selectYear);
 
-    arrayFilterYear.forEach(function(i){
+    arrayFilterYear.forEach((i)=>{
         const tableYear= document.getElementById("table_year");
         //console.log(i);
         tableYear.innerHTML="<td>Train:</td> <td>"+i.Total_Injured_Persons_Railroad_Train_Accidents+"</td>";
@@ -51,11 +44,11 @@ function viewYearTable(){
         tableYear.innerHTML+="<td>Motocyclists:</td> <td>"+i.Total_Injured_Persons_Motorcyclists+"</td>";
         tableYear.innerHTML+="<td>Car:</td> <td>"+i.Total_Injured_Persons_Passenger_Car_Occupants+"</td>";
         tableYear.innerHTML+="<td>Bus:</td> <td>"+i.Total_Injured_Persons_Bus_Occupants+"</td>";
-    })}
 
-    btnSearch.addEventListener("click",viewYearTable);
-
-function printYears(data){
+    })
+    });
+    
+let printYears=(data)=>{
     const tableCategory = document.getElementById("table_category");
     tableCategory.innerHTML = "";
     data.forEach(function(a) {
@@ -73,33 +66,43 @@ function viewCategory(idCategory, categoryName){
     sectionFilterYear.classList.add("classShow");
     printYears(data);
 }
+//CREAMOS A LA FUNCION VIEWCATEGORY PARA MOSTRAR CATEGORIAS LLAMANDO A showCategory DESDE DATA.JS//
+function viewCategory(idCategory, categoryName){
+
+    document.getElementById(idCategory).classList.toggle("classShow");
+
+    const data = showCategory(categoryName);
+    window.dataFilter = data
+    sectionFilterYear.classList.add("classShow");
+    printYears(data);
+}
 
 //LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA TRAIN//
-btnTrain.addEventListener("click",function(){
+btnTrain.addEventListener("click",()=>{
   viewCategory("train",train);// seccion HTML , constante con el string que tiene le nombre del indicador
 });
 
 //LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA PEDALCYCLIST//
-btnPedalcyclists.addEventListener("click",function(){
+btnPedalcyclists.addEventListener("click",()=>{
     document.getElementById("train").classList.toggle("classShow");
     viewCategory("pedalcyclists",pedalcyclists);
     sectionFilterYear.classList.toggle("classShow");
 });
 
 //LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA MOTORCYCLIST//
-btnMotorcyclist.addEventListener("click",function(){
+btnMotorcyclist.addEventListener("click",()=>{
     document.getElementById("pedalcyclists").classList.toggle("classShow");
     viewCategory("motocyclists",motorcyclists);
 });
 
 //LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA CAR//
-btnCar.addEventListener("click",function(){
+btnCar.addEventListener("click",()=>{
     document.getElementById("motocyclists").classList.toggle("classShow");
     viewCategory("car",car);
 });
 
 //LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA BUS//
-btnBus.addEventListener("click",function(){
+btnBus.addEventListener("click",()=>{
     document.getElementById("car").classList.toggle("classShow");
     viewCategory("bus",bus);
 });

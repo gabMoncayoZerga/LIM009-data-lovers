@@ -35,3 +35,6 @@ const orderAscendente=() => {
 };
 
 //window.showCategory = showCategory;
+
+
+
