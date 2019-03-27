@@ -1,10 +1,5 @@
-//NARDA
-// window.example = example;
-const data = window.data;
-// const compareYear=(a)=>{
-//   a.Year.substr(0,4) === selectYear
-// }
-//filtrar año
+const data = INJURIES;
+
 const FilterYear = (data,selectYear)=>{//filter
     // return year==selectYear;//
     //const dataYear = data.filter(compareYear(selectYear));//year
@@ -26,7 +21,7 @@ const showCategory=(category) => {
 
 // let orderAscendente = data.sort(function(a, b){
 const orderAscendente=() => {
-  const dataFilter = window.dataFilter;  
+  const dataFilter = window.dataFilter;
   const listOrdered = dataFilter.sort(function(a, b){
     if (a.Year > b.Year) {
       return 1;
@@ -40,3 +35,6 @@ const orderAscendente=() => {
 };
 
 //window.showCategory = showCategory;
+
+
+
