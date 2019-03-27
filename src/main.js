@@ -13,7 +13,7 @@ const pedalcyclists ="Total_Injured_Persons_Pedalcyclists";
 const motorcyclists = "Total_Injured_Persons_Motorcyclists";
 const car ="Total_Injured_Persons_Passenger_Car_Occupants";
 const bus = "Total_Injured_Persons_Bus_Occupants";
-const sectionFooter = document.getElementById("footer");
+const sectionFooter = document.querySelector("footer");
 sectionLogin.classList.toggle("classShow");
 sectionFooter.classList.toggle("classHidden");
 
@@ -29,9 +29,9 @@ btnEnter.addEventListener("click",(e) => {
       } else {
           document.getElementById("name_user").innerHTML = user;
           sectionLogin.classList.toggle("classShow");
-        /*  footer.classList.toogle("classShow");*/
+          sectionFooter.classList.toggle("classHidden");
           sectionHome.classList.toggle("classShow");
-          //sectionFilterYear.classList.toggle("classShow");
+          sectionFilterYear.classList.toggle("classShow");
          }
 });
 const btnSearch = document.getElementById("search");
@@ -41,7 +41,8 @@ btnSearch.addEventListener("click",viewYearTable);
 //FUNCION PARA MOSTRAR LA DATA POR AÑOS//
 function viewYearTable(){
     let selectYear = document.getElementById("selected_year").value;
-    const arrayFilterYear = FilterYear(selectYear);
+    const data = window.data;
+    const arrayFilterYear = FilterYear(data, selectYear);
 
     arrayFilterYear.forEach(function(i){
         const tableYear= document.getElementById("table_year");
@@ -59,7 +60,12 @@ function viewCategory(idCategory, categoryName){
     document.getElementById(idCategory).classList.toggle("classShow");
 
     const data = showCategory(categoryName);
+    window.dataFilter = data
     sectionFilterYear.classList.toggle("classShow");
+    printYears(data);
+}
+
+function printYears(data){
     const tableCategory = document.getElementById("table_category");
     tableCategory.innerHTML = "";
     data.forEach(function(a) {
@@ -76,6 +82,7 @@ btnTrain.addEventListener("click",function(){
 btnPedalcyclists.addEventListener("click",function(){
     document.getElementById("train").classList.toggle("classShow");
     viewCategory("pedalcyclists",pedalcyclists);
+    sectionFilterYear.classList.toggle("classShow");
 });
 
 //LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA MOTORCYCLIST//
@@ -95,3 +102,19 @@ btnBus.addEventListener("click",function(){
     document.getElementById("car").classList.toggle("classShow");
     viewCategory("bus",bus);
 });
+
+let selectOrder=document.getElementById("select_order");
+
+selectOrder.addEventListener("change", orderYear);
+
+
+function orderYear(){
+    let selectOrder = document.getElementById("select_order").value;
+    let listOrder = []
+    if(selectOrder=="ascendente"){
+        listOrder = orderAscendente();
+    }else if (selectOrder=="descendente"){
+        listOrder = orderAscendente().reverse();
+    }
+    printYears(listOrder);
+};
