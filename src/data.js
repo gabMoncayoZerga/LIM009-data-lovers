@@ -11,13 +11,13 @@ const FilterYear = (data,selectYear)=>{//filter
 const showCategory=(category) => {
   let dataCategory = [];
   data.forEach(function (dat) {
-   const value = dat[category];
-   const year= dat.Year.substr(0,4);
-    dataCategory.push({Injures:value, Year: year});
+  const value = dat[category]==null?"Register not found":dat[category];
+  const year= dat.Year.substr(0,4);
+  dataCategory.push({Injures:value, Year: year});
   });
   return dataCategory;
 }
-//haciendo el sort
+
 
 // let orderAscendente = data.sort(function(a, b){
 const orderAscendente=() => {

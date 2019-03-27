@@ -31,7 +31,6 @@ btnEnter.addEventListener("click",(e) => {
           sectionFilterYear.classList.toggle("classShow");
          }
 });
-
 btnSearch.addEventListener("click",(viewYearTable)=>{
     const data = INJURIES;
     let selectYear = document.getElementById("selected_year").value;
@@ -45,6 +44,7 @@ btnSearch.addEventListener("click",(viewYearTable)=>{
         tableYear.innerHTML+="<td>Motocyclists:</td> <td>"+i.Total_Injured_Persons_Motorcyclists+"</td>";
         tableYear.innerHTML+="<td>Car:</td> <td>"+i.Total_Injured_Persons_Passenger_Car_Occupants+"</td>";
         tableYear.innerHTML+="<td>Bus:</td> <td>"+i.Total_Injured_Persons_Bus_Occupants+"</td>";
+
     })
     });
     
@@ -66,7 +66,16 @@ function viewCategory(idCategory, categoryName){
     sectionFilterYear.classList.add("classShow");
     printYears(data);
 }
+//CREAMOS A LA FUNCION VIEWCATEGORY PARA MOSTRAR CATEGORIAS LLAMANDO A showCategory DESDE DATA.JS//
+function viewCategory(idCategory, categoryName){
 
+    document.getElementById(idCategory).classList.toggle("classShow");
+
+    const data = showCategory(categoryName);
+    window.dataFilter = data
+    sectionFilterYear.classList.add("classShow");
+    printYears(data);
+}
 
 //LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA TRAIN//
 btnTrain.addEventListener("click",()=>{
