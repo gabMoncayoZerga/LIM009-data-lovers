@@ -27,7 +27,6 @@ const sortData=(data, sortBy, sortOrder)=> {
       return 0;
     }
   });
-
   if (sortOrder == "A"){
     return listOrdered;
   }else if (sortOrder == "D"){

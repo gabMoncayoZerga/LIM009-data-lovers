@@ -17,6 +17,7 @@ const bus = "Total_Injured_Persons_Bus_Occupants";
 const sectionFooter = document.querySelector("footer");
 sectionLogin.classList.toggle("classShow");
 sectionFooter.classList.toggle("classHidden");
+let selectOrder=document.getElementById("select_order");
 
 btnEnter.addEventListener("click",(e) => {
     e.preventDefault();
@@ -31,16 +32,11 @@ btnEnter.addEventListener("click",(e) => {
           sectionFilterYear.classList.toggle("classShow");
          }
 });
-<<<<<<< HEAD
 
 btnSearch.addEventListener("click",()=>{
-=======
-btnSearch.addEventListener("click",(viewYearTable)=>{
->>>>>>> 4468cf2e1ba778a6e9c331753d4f967b06a01908
     const data = INJURIES;
     let selectYear = document.getElementById("selected_year").value;
     const arrayFilterYear = filterByYear(data, selectYear);
-
     arrayFilterYear.forEach((i)=>{
         const tableYear= document.getElementById("table_year");
         //console.log(i);
@@ -49,16 +45,15 @@ btnSearch.addEventListener("click",(viewYearTable)=>{
         tableYear.innerHTML+="<td>Motocyclists:</td> <td>"+i.Total_Injured_Persons_Motorcyclists+"</td>";
         tableYear.innerHTML+="<td>Car:</td> <td>"+i.Total_Injured_Persons_Passenger_Car_Occupants+"</td>";
         tableYear.innerHTML+="<td>Bus:</td> <td>"+i.Total_Injured_Persons_Bus_Occupants+"</td>";
-
     })
-    });
+    });    
     
-viewCategory=(idCategory, categoryName)=>{
+const viewCategory=(idCategory, categoryName)=>{
     document.getElementById(idCategory).classList.toggle("classShow");
     const dataCategory = showCategory(categoryName);
     printYears(dataCategory);
 
-    const SelectOrder = document.getElementById("select_order");
+    const selectOrder = document.getElementById("select_order");
     selectOrder.addEventListener("change",() =>{
         let sortOrder = document.getElementById("select_order").value;
         let listOrder = []
@@ -75,34 +70,10 @@ let printYears=(data)=>{
     const tableCategory = document.getElementById("table_category");
     tableCategory.innerHTML = "";
     data.forEach(function(a) {
-        tableCategory.innerHTML+= "<td>"+a.Year+"</td>" +"<td>"+a.Injures+"</td>";
+        tableCategory.innerHTML+= `<td>${a.Year}</td><td>${a.Injures}</td>`;
       });
 }
 
-<<<<<<< HEAD
-=======
-//CREAMOS A LA FUNCION VIEWCATEGORY PARA MOSTRAR CATEGORIAS LLAMANDO A showCategory DESDE DATA.JS//
-function viewCategory(idCategory, categoryName){
-
-    document.getElementById(idCategory).classList.toggle("classShow");
-
-    const data = showCategory(categoryName);
-    window.dataFilter = data
-    sectionFilterYear.classList.add("classShow");
-    printYears(data);
-}
-//CREAMOS A LA FUNCION VIEWCATEGORY PARA MOSTRAR CATEGORIAS LLAMANDO A showCategory DESDE DATA.JS//
-function viewCategory(idCategory, categoryName){
-
-    document.getElementById(idCategory).classList.toggle("classShow");
-
-    const data = showCategory(categoryName);
-    window.dataFilter = data
-    sectionFilterYear.classList.add("classShow");
-    printYears(data);
-}
-
->>>>>>> 4468cf2e1ba778a6e9c331753d4f967b06a01908
 //LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA TRAIN//
 btnTrain.addEventListener("click",()=>{
   viewCategory("train",train);// seccion HTML , constante con el string que tiene le nombre del indicador
@@ -129,20 +100,5 @@ btnBus.addEventListener("click",()=>{
     viewCategory("bus",bus);
 });
 //LLAMANDO A SORT //
-let selectOrder=document.getElementById("select_order");
 
 
-
-<<<<<<< HEAD
-=======
-function orderYear(){
-    let selectOrder = document.getElementById("select_order").value;
-    let listOrder = []
-    if(selectOrder=="ascendente"){
-        listOrder = orderAscendente();
-    }else if (selectOrder=="descendente"){
-        listOrder = orderAscendente().reverse();
-    }
-    printYears(listOrder);
-};
->>>>>>> 4468cf2e1ba778a6e9c331753d4f967b06a01908
