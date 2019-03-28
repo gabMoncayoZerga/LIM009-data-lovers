@@ -12,12 +12,11 @@ const showCategory=(category) => {
    const value = dat[category]== null ? "Register not found": dat[category];
    const year= dat.Year.substr(0,4);
     dataCategory.push({Injures:value, Year: year});
+
+
   });
   return dataCategory;
 }
-//haciendo el sort
-
-
 const sortData=(data, sortBy, sortOrder)=> {
   const listOrdered = data.sort(function(a, b){
     if (a[sortBy] > b[sortBy]) {

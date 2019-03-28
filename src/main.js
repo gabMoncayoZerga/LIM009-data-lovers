@@ -31,8 +31,12 @@ btnEnter.addEventListener("click",(e) => {
           sectionFilterYear.classList.toggle("classShow");
          }
 });
+<<<<<<< HEAD
 
 btnSearch.addEventListener("click",()=>{
+=======
+btnSearch.addEventListener("click",(viewYearTable)=>{
+>>>>>>> 4468cf2e1ba778a6e9c331753d4f967b06a01908
     const data = INJURIES;
     let selectYear = document.getElementById("selected_year").value;
     const arrayFilterYear = filterByYear(data, selectYear);
@@ -45,6 +49,7 @@ btnSearch.addEventListener("click",()=>{
         tableYear.innerHTML+="<td>Motocyclists:</td> <td>"+i.Total_Injured_Persons_Motorcyclists+"</td>";
         tableYear.innerHTML+="<td>Car:</td> <td>"+i.Total_Injured_Persons_Passenger_Car_Occupants+"</td>";
         tableYear.innerHTML+="<td>Bus:</td> <td>"+i.Total_Injured_Persons_Bus_Occupants+"</td>";
+
     })
     });
     
@@ -74,6 +79,30 @@ let printYears=(data)=>{
       });
 }
 
+<<<<<<< HEAD
+=======
+//CREAMOS A LA FUNCION VIEWCATEGORY PARA MOSTRAR CATEGORIAS LLAMANDO A showCategory DESDE DATA.JS//
+function viewCategory(idCategory, categoryName){
+
+    document.getElementById(idCategory).classList.toggle("classShow");
+
+    const data = showCategory(categoryName);
+    window.dataFilter = data
+    sectionFilterYear.classList.add("classShow");
+    printYears(data);
+}
+//CREAMOS A LA FUNCION VIEWCATEGORY PARA MOSTRAR CATEGORIAS LLAMANDO A showCategory DESDE DATA.JS//
+function viewCategory(idCategory, categoryName){
+
+    document.getElementById(idCategory).classList.toggle("classShow");
+
+    const data = showCategory(categoryName);
+    window.dataFilter = data
+    sectionFilterYear.classList.add("classShow");
+    printYears(data);
+}
+
+>>>>>>> 4468cf2e1ba778a6e9c331753d4f967b06a01908
 //LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA TRAIN//
 btnTrain.addEventListener("click",()=>{
   viewCategory("train",train);// seccion HTML , constante con el string que tiene le nombre del indicador
@@ -104,3 +133,16 @@ let selectOrder=document.getElementById("select_order");
 
 
 
+<<<<<<< HEAD
+=======
+function orderYear(){
+    let selectOrder = document.getElementById("select_order").value;
+    let listOrder = []
+    if(selectOrder=="ascendente"){
+        listOrder = orderAscendente();
+    }else if (selectOrder=="descendente"){
+        listOrder = orderAscendente().reverse();
+    }
+    printYears(listOrder);
+};
+>>>>>>> 4468cf2e1ba778a6e9c331753d4f967b06a01908
