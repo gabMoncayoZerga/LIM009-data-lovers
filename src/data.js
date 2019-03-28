@@ -1,8 +1,6 @@
 const data = INJURIES;
 
-const FilterYear = (data,selectYear)=>{//filter
-    // return year==selectYear;//
-    //const dataYear = data.filter(compareYear(selectYear));//year
+const filterByYear = (data,selectYear)=>{
     const dataYear = data.filter(dat=>dat.Year.substr(0,4)===selectYear)
     return dataYear;
   }
@@ -11,7 +9,7 @@ const FilterYear = (data,selectYear)=>{//filter
 const showCategory=(category) => {
   let dataCategory = [];
   data.forEach(function (dat) {
-   const value = dat[category];
+   const value = dat[category]== null ? "Register not found": dat[category];
    const year= dat.Year.substr(0,4);
     dataCategory.push({Injures:value, Year: year});
   });
@@ -19,22 +17,25 @@ const showCategory=(category) => {
 }
 //haciendo el sort
 
-// let orderAscendente = data.sort(function(a, b){
-const orderAscendente=() => {
-  const dataFilter = window.dataFilter;
-  const listOrdered = dataFilter.sort(function(a, b){
-    if (a.Year > b.Year) {
+
+const sortData=(data, sortBy, sortOrder)=> {
+  const listOrdered = data.sort(function(a, b){
+    if (a[sortBy] > b[sortBy]) {
       return 1;
-    } else if (a.Year < b.Year) {
+    } else if (a[sortBy] < b[sortBy]) {
       return -1;
-    } else if (a.Year === b.Year) {
+    } else if (a[sortBy] === b[sortBy]) {
       return 0;
     }
-  })
-  return listOrdered;
+  });
+
+  if (sortOrder == "A"){
+    return listOrdered;
+  }else if (sortOrder == "D"){
+    return listOrdered.reverse();
+  }
 };
 
-//window.showCategory = showCategory;
 
 
 

@@ -32,10 +32,10 @@ btnEnter.addEventListener("click",(e) => {
          }
 });
 
-btnSearch.addEventListener("click",(viewYearTable)=>{
+btnSearch.addEventListener("click",()=>{
     const data = INJURIES;
     let selectYear = document.getElementById("selected_year").value;
-    const arrayFilterYear = FilterYear(data, selectYear);
+    const arrayFilterYear = filterByYear(data, selectYear);
 
     arrayFilterYear.forEach((i)=>{
         const tableYear= document.getElementById("table_year");
@@ -48,6 +48,24 @@ btnSearch.addEventListener("click",(viewYearTable)=>{
     })
     });
     
+viewCategory=(idCategory, categoryName)=>{
+    document.getElementById(idCategory).classList.toggle("classShow");
+    const dataCategory = showCategory(categoryName);
+    printYears(dataCategory);
+
+    const SelectOrder = document.getElementById("select_order");
+    selectOrder.addEventListener("change",() =>{
+        let sortOrder = document.getElementById("select_order").value;
+        let listOrder = []
+        if(sortOrder=="ascendente"){
+            listOrder = sortData(dataCategory,"Year","A");
+        }else if (sortOrder=="descendente"){
+            listOrder =  sortData(dataCategory,"Year","D");
+        }
+        printYears(listOrder);
+    });
+}
+
 let printYears=(data)=>{
     const tableCategory = document.getElementById("table_category");
     tableCategory.innerHTML = "";
@@ -56,61 +74,33 @@ let printYears=(data)=>{
       });
 }
 
-//CREAMOS A LA FUNCION VIEWCATEGORY PARA MOSTRAR CATEGORIAS LLAMANDO A showCategory DESDE DATA.JS//
-function viewCategory(idCategory, categoryName){
-
-    document.getElementById(idCategory).classList.toggle("classShow");
-
-    const data = showCategory(categoryName);
-    window.dataFilter = data
-    sectionFilterYear.classList.add("classShow");
-    printYears(data);
-}
-
-
 //LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA TRAIN//
 btnTrain.addEventListener("click",()=>{
   viewCategory("train",train);// seccion HTML , constante con el string que tiene le nombre del indicador
 });
-
 //LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA PEDALCYCLIST//
 btnPedalcyclists.addEventListener("click",()=>{
     document.getElementById("train").classList.toggle("classShow");
     viewCategory("pedalcyclists",pedalcyclists);
     sectionFilterYear.classList.toggle("classShow");
 });
-
 //LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA MOTORCYCLIST//
 btnMotorcyclist.addEventListener("click",()=>{
     document.getElementById("pedalcyclists").classList.toggle("classShow");
     viewCategory("motocyclists",motorcyclists);
 });
-
 //LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA CAR//
 btnCar.addEventListener("click",()=>{
     document.getElementById("motocyclists").classList.toggle("classShow");
     viewCategory("car",car);
 });
-
 //LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA BUS//
 btnBus.addEventListener("click",()=>{
     document.getElementById("car").classList.toggle("classShow");
     viewCategory("bus",bus);
 });
-
 //LLAMANDO A SORT //
 let selectOrder=document.getElementById("select_order");
 
-selectOrder.addEventListener("change", orderYear);
 
 
-function orderYear(){
-    let selectOrder = document.getElementById("select_order").value;
-    let listOrder = []
-    if(selectOrder=="ascendente"){
-        listOrder = orderAscendente();
-    }else if (selectOrder=="descendente"){
-        listOrder = orderAscendente().reverse();
-    }
-    printYears(listOrder);
-};
