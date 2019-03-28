@@ -32,50 +32,57 @@ btnEnter.addEventListener("click",(e) => {
          }
 });
 
-
 btnSearch.addEventListener("click",()=>{
+    const data = INJURIES;
     let selectYear = document.getElementById("selected_year").value;
-    const arrayFilterYear = filterByYear(data, selectYear);
     const tableYear= document.getElementById("table_year");
-    tableYear.innerHTML="";
-    for (let i = 0; i < arrayFilterYear.length; i++) {
-      tableYear.innerHTML+=
-        `
-        <tr><td>Train:</td><td>${arrayFilterYear[i].Total_Injured_Persons_Railroad_Train_Accidents}</td></tr>
-        <tr><td>Train:</td><td>${arrayFilterYear[i].Total_Injured_Persons_Pedalcyclists}</td></tr>
-        <tr><td>Train:</td><td>${arrayFilterYear[i].Total_Injured_Persons_Motorcyclists}</td></tr>
-        <tr><td>Train:</td><td>${arrayFilterYear[i].Total_Injured_Persons_Passenger_Car_Occupants}</td></tr>
-        <tr><td>Train:</td><td>${arrayFilterYear[i].Total_Injured_Persons_Bus_Occupants}</td></tr>
-        `;
-    }
+    const arrayFilterYear = filterByYear(data, selectYear);
+    arrayFilterYear.forEach((i)=>{
+        //console.log(i);
 
-});
+      tableYear.innerHTML=`<td>Train:</td><td>${i.Total_Injured_Persons_Railroad_Train_Accidents}</td>`
+      tableYear.innerHTML+=`<td>Pedalcyclist:</td><td>${i.Total_Injured_Persons_Pedalcyclists}</td>`
+      tableYear.innerHTML+=`<td>Motocyclist:</td><td>${i.Total_Injured_Persons_Motorcyclists}</td>`
+      tableYear.innerHTML+=`<td>Car:</td><td>${i.Total_Injured_Persons_Passenger_Car_Occupants}</td>`
+      tableYear.innerHTML+=`<td>Bus:</td><td>${i.Total_Injured_Persons_Bus_Occupants}</td>`
 
-const viewYear = (data, selectYear) =>{
-  let valueYear=selectYear.value;
-  const arrayFilterYear= filterByYear(data,valueYear);
-  console.log(arrayFilterYear);
-}
-//CREAMOS A LA FUNCION VIEWCATEGORY PARA MOSTRAR CATEGORIAS LLAMANDO A showCategory DESDE DATA.JS//
-const  viewCategory =(idCategory, categoryName)=>{
+      });
+    })
+
+
+const viewCategory=(idCategory, categoryName)=>{
     document.getElementById(idCategory).classList.toggle("classShow");
-    const data = showCategory(categoryName);
-    sectionFilterYear.classList.add("classShow");
+    const dataCategory = showCategory(categoryName);
+    printYears(dataCategory);
+
+    const selectOrder = document.getElementById("select_order");
+    selectOrder.addEventListener("change",() =>{
+        let sortOrder = document.getElementById("select_order").value;
+        let listOrder = []
+        if(sortOrder=="ascendente"){
+            listOrder = sortData(dataCategory,"Year","A");
+        }else if (sortOrder=="descendente"){
+            listOrder =  sortData(dataCategory,"Year","D");
+        }
+        printYears(listOrder);
+    });
+}
+
+
+let printYears=(data)=>{
     const tableCategory = document.getElementById("table_category");
     tableCategory.innerHTML = "";
-    for(let i=0; i<data.length;i++){
-      tableCategory.innerHTML += `
-        <td>${data[i].Year}</td>
-        <td>${data[i].Injures}</td>
-      `;
-    }
-
+    data.forEach(function(a) {
+        tableCategory.innerHTML+= `<td>${a.Year}</td><td>${a.Injures}</td>`;
+      });
 }
+
+//LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA TRAIN//
 
 btnTrain.addEventListener("click",()=>{
   viewCategory("train",train);// seccion HTML , constante con el string
 });
-
+//LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA PEDALCYCLIST//
 btnPedalcyclists.addEventListener("click",()=>{
     document.getElementById("train").classList.toggle("classShow");
     viewCategory("pedalcyclists",pedalcyclists);

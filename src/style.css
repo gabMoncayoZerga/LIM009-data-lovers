@@ -52,9 +52,18 @@ h1{
   background-image:url(https://i.postimg.cc/28m9KFs1/trainBtn.png);
 }
 .box-info{
-  width: 500px;
+  width: 1200px;
   background: #442856;
+  
+}
+.info{
+  width: 50%;
   margin: 10px 20px;
+  padding: 10%;
+}
+.imagen-category{
+  width: 80%;
+  margin-left:50%;
 }
 .tableInfo{
   height: 300px;
