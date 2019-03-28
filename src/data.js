@@ -17,7 +17,7 @@ const showCategory=(category) => {
 
 }
 
-
+/*
 const sortData= (data, year, sortOrder)=>{
 
 
@@ -30,5 +30,5 @@ máximo y minimo
 
 window.filterYear= filterByYear;
 window.showCategory = showCategory;
-window.sortData=sortData;
+//window.sortData=sortData;
 //window.computeStats=computeStats;
