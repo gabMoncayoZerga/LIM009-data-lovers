@@ -5,7 +5,7 @@ const filterByYear = (data,selectYear)=>{
     return dataYear;
   }
 
-//filtrar por categoria
+
 const showCategory=(category) => {
   let dataCategory = [];
   data.forEach(function (dat) {
@@ -16,7 +16,9 @@ const showCategory=(category) => {
 
   });
   return dataCategory;
+
 }
+
 const sortData=(data, sortBy, sortOrder)=> {
   const listOrdered = data.sort(function(a, b){
     if (a[sortBy] > b[sortBy]) {
@@ -33,7 +35,3 @@ const sortData=(data, sortBy, sortOrder)=> {
     return listOrdered.reverse();
   }
 };
-
-
-
-
