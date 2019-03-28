@@ -46,14 +46,13 @@ btnSearch.addEventListener("click",()=>{
     for (let i = 0; i < arrayFilterYear.length; i++) {
       tableYear.innerHTML+=
         `
-        <td>Train:</td><td>${arrayFilterYear[i].Total_Injured_Persons_Railroad_Train_Accidents}</td>
-        <td>Train:</td><td>${arrayFilterYear[i].Total_Injured_Persons_Pedalcyclists}</td>
-        <td>Train:</td><td>${arrayFilterYear[i].Total_Injured_Persons_Motorcyclists}</td>
-        <td>Train:</td><td>${arrayFilterYear[i].Total_Injured_Persons_Passenger_Car_Occupants}</td>
-        <td>Train:</td><td>${arrayFilterYear[i].Total_Injured_Persons_Bus_Occupants}</td>
+        <tr><td>Train:</td><td>${arrayFilterYear[i].Total_Injured_Persons_Railroad_Train_Accidents}</td></tr>
+        <tr><td>Train:</td><td>${arrayFilterYear[i].Total_Injured_Persons_Pedalcyclists}</td></tr>
+        <tr><td>Train:</td><td>${arrayFilterYear[i].Total_Injured_Persons_Motorcyclists}</td></tr>
+        <tr><td>Train:</td><td>${arrayFilterYear[i].Total_Injured_Persons_Passenger_Car_Occupants}</td></tr>
+        <tr><td>Train:</td><td>${arrayFilterYear[i].Total_Injured_Persons_Bus_Occupants}</td></tr>
 
         `;
-
     }
 
 });

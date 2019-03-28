@@ -14,10 +14,13 @@ const showCategory=(category) => {
   dataCategory.push({Injures:value, Year: year});
   });
   return dataCategory;
+
 }
-console.log(showCategory);
-/*
+
+
 const sortData= (data, sortBy, sortOrder)=>{
+
+
 
 }
 
@@ -27,5 +30,5 @@ máximo y minimo
 
 window.filterYear= filterByYear;
 window.showCategory = showCategory;
-//window.sortData=sortData;
+window.sortData=sortData;
 //window.computeStats=computeStats;
