@@ -1,8 +1,3 @@
-//EJEMPLOS VARIABLES GLOBALES
-//const texto='hola';
-//const texto1=0;
-//const texto2=['a','b','c'];
-/*Manejo del DOM*/
 const btnTrain = document.getElementById("btn_train");
 const btnEnter = document.getElementById("btn_enter");
 const btnPedalcyclists = document.getElementById("btn_pedalcyclists");
@@ -51,22 +46,16 @@ btnSearch.addEventListener("click",()=>{
         <tr><td>Train:</td><td>${arrayFilterYear[i].Total_Injured_Persons_Motorcyclists}</td></tr>
         <tr><td>Train:</td><td>${arrayFilterYear[i].Total_Injured_Persons_Passenger_Car_Occupants}</td></tr>
         <tr><td>Train:</td><td>${arrayFilterYear[i].Total_Injured_Persons_Bus_Occupants}</td></tr>
-
         `;
     }
 
 });
 
-/*const viewYear = (data, selectYear) =>{
+const viewYear = (data, selectYear) =>{
   let valueYear=selectYear.value;
   const arrayFilterYear= filterByYear(data,valueYear);
   console.log(arrayFilterYear);
 }
-
-btnSearch.addEventListener("click", ()=>{
-  viewYear();
-})*/
-
 //CREAMOS A LA FUNCION VIEWCATEGORY PARA MOSTRAR CATEGORIAS LLAMANDO A showCategory DESDE DATA.JS//
 const  viewCategory =(idCategory, categoryName)=>{
     document.getElementById(idCategory).classList.toggle("classShow");
@@ -80,9 +69,7 @@ const  viewCategory =(idCategory, categoryName)=>{
         <td>${data[i].Injures}</td>
       `;
     }
-    /*data.forEach(function(a) {
-        tableCategory.innerHTML+= "<td>"+a.Year+"</td>" +"<td>"+a.Injures+"</td>";
-    });*/
+
 }
 
 btnTrain.addEventListener("click",()=>{
