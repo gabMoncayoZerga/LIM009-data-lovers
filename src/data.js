@@ -18,7 +18,7 @@ const showCategory=(category) => {
 }
 
 
-const sortData= (data, sortBy, sortOrder)=>{
+const sortData= (data, year, sortOrder)=>{
 
 
 
