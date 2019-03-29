@@ -2,7 +2,7 @@ const filterByYear = (data,selectYear)=>{
     const dataYear = data.filter(dat=>dat.Year.substr(0,4)===selectYear)
     return dataYear;
   }
-
+  
 const showCategory=(data,category) => {
   let dataCategory = [];
   data.forEach(function (dat) {
@@ -12,7 +12,6 @@ const showCategory=(data,category) => {
   });
   return dataCategory;
 }
-
 
 const sortData=(data, sortBy, sortOrder)=> {
   const listOrdered = data.sort(function(a, b){
@@ -31,8 +30,6 @@ const sortData=(data, sortBy, sortOrder)=> {
   }
 };
 
-
-//calculo
 const computeStats= (data) =>{
   let arr= [];
   for (let i = 0; i < data.length; i++) {
@@ -41,12 +38,10 @@ const computeStats= (data) =>{
       }
   }
   let suma=0;
-
   for (let i = 0; i < arr.length; i++) {
     suma += arr[i];
   }
   return suma;
-
 }
 
 window.filterByYear= filterByYear;

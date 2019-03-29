@@ -62,34 +62,39 @@ btnSearch.addEventListener("click",()=>{
       tableYear.innerHTML+=`<td>Bus:</td><td>${i.Total_Injured_Persons_Bus_Occupants}</td>`
       });
     })
-
-const viewCategory=(idCategory, categoryName)=>{
-    document.getElementById(idCategory).classList.toggle("classShow");
-    selectTableCategory.classList.toggle("classShow");
-    tableStructureCategory.classList.toggle("classShow");
-    const dataCategory = window.showCategory(data,categoryName);
-    printYears(dataCategory);
-    //Llamar función suma
-    printSuma(dataCategory,categoryName);
-    const selectOrder = document.getElementById("select_order");
-    selectOrder.addEventListener("change",() =>{
-        let sortOrder = document.getElementById("select_order").value;
-        let listOrder = []
-        if(sortOrder=="ascendente"){
-            listOrder = window.sortData(dataCategory,"Year","A");
-        }else if (sortOrder=="descendente"){
-            listOrder =  window.sortData(dataCategory,"Year","D");
-        }
-        printYears(listOrder);
-    });
+const printYears=(data)=>{
+  const tableCategory = document.getElementById("table_category");
+  tableCategory.innerHTML = "";
+  data.forEach(function(a) {
+    tableCategory.innerHTML+= `<td>${a.Year}</td><td>${a.Injuries}</td>`;
+  });
 }
-
-let printYears=(data)=>{
-    const tableCategory = document.getElementById("table_category");
-    tableCategory.innerHTML = "";
-    data.forEach(function(a) {
-        tableCategory.innerHTML+= `<td>${a.Year}</td><td>${a.Injuries}</td>`;
-      });
+const printSuma=(data,category)=>{
+  const tableSuma = document.getElementById("table_suma");
+  let total=window.computeStats(data);
+  tableSuma.innerHTML = "";
+  tableSuma.innerHTML+= `<td>${category}</td><td>${total}</td>`;
+}
+    
+const viewCategory=(idCategory, categoryName)=>{
+  document.getElementById(idCategory).classList.toggle("classShow");
+  selectTableCategory.classList.toggle("classShow");
+  tableStructureCategory.classList.toggle("classShow");
+  const dataCategory = window.showCategory(data,categoryName);
+  printYears(dataCategory);
+    //Llamar función suma
+  printSuma(dataCategory,categoryName);
+  const selectOrder = document.getElementById("select_order");
+  selectOrder.addEventListener("change",() =>{
+    let sortOrder = document.getElementById("select_order").value;
+    let listOrder = []
+    if(sortOrder=="ascendente"){
+      listOrder = window.sortData(dataCategory,"Year","A");
+    }else if (sortOrder=="descendente"){
+      listOrder =  window.sortData(dataCategory,"Year","D");
+    }
+  printYears(listOrder);
+  });
 }
 //LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA TRAIN//
 btnTrain.addEventListener("click",()=>{
@@ -116,11 +121,3 @@ btnBus.addEventListener("click",()=>{
   document.getElementById("car").classList.toggle("classShow");
   viewCategory("bus",bus);
 });
-
-// suma //
-let printSuma=(data,category)=>{
-    const tableSuma = document.getElementById("table_suma");
-    let total=window.computeStats(data);
-    tableSuma.innerHTML = "";
-    tableSuma.innerHTML+= `<td>${category}</td><td>${total}</td>`;
-}
