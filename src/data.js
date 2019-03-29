@@ -1,12 +1,11 @@
-const data = INJURIES;
+//const data = INJURIES;
 
 const filterByYear = (data,selectYear)=>{
     const dataYear = data.filter(dat=>dat.Year.substr(0,4)===selectYear)
     return dataYear;
   }
 
-
-const showCategory=(category) => {
+const showCategory=(data,category) => {
   let dataCategory = [];
   data.forEach(function (dat) {
    const value = dat[category]== null ? "Register not found": dat[category];
@@ -14,9 +13,8 @@ const showCategory=(category) => {
     dataCategory.push({Injuries:value, Year: year});
   });
   return dataCategory;
-
-
 }
+
 
 const sortData=(data, sortBy, sortOrder)=> {
   const listOrdered = data.sort(function(a, b){
@@ -36,40 +34,21 @@ const sortData=(data, sortBy, sortOrder)=> {
   }
 };
 
-//Funcion màximo y mìnimo
+//calculo
 const computeStats= (data) =>{
-  /*//màximo
-  if(tipo=='max'){
-    let array_valor= [];
-    for (var i = 0; i < data.length; i++) {
-      if(!(data[i].Injuries=='Register not found')){
-        array_valor.push(data[i].Injuries);
-        //array_valor.push(parseInt(data[i].Injuries, 10));
-      }
-    }
-    console.log(array_valor);
-    let maximo_valor=Math.max(array_valor);
-    console.log('maximoooo');
-    console.log(maximo_valor);
-  }
-  else{
-    console.log('minimoooo');
-  }
-  */
-  let array_valor= [];
-  for (var i = 0; i < data.length; i++) {
+  let arr= [];
+  for (let i = 0; i < data.length; i++) {
     if(!(data[i].Injuries=='Register not found')){
-      array_valor.push(data[i].Injuries);
-      //array_valor.push(parseInt(data[i].Injuries, 10));
-    }
+      arr.push(data[i].Injuries);
+      }
   }
   let suma=0;
-  console.log(array_valor);
-  for (var j = 0; j < array_valor.length; j++) {
-    suma += array_valor[j];
+
+  for (let i = 0; i < arr.length; i++) {
+    suma += arr[i];
   }
   return suma;
-  console.log(suma);
+
 }
 
 window.filterByYear= filterByYear;

@@ -1,3 +1,4 @@
+const data=INJURIES;
 const btnTrain = document.getElementById("btn_train");
 const btnEnter = document.getElementById("btn_enter");
 const btnPedalcyclists = document.getElementById("btn_pedalcyclists");
@@ -8,7 +9,7 @@ const sectionLogin = document.getElementById("login");
 const sectionHome = document.getElementById("home");
 const btnSearch = document.getElementById("search");
 const sectionFilterYear= document.getElementById("year_section");
-const sectionMaximoMinimo= document.getElementById("maxmin_section");
+const sectionSuma= document.getElementById("suma_section");
 const train = "Total_Injured_Persons_Railroad_Train_Accidents";
 const pedalcyclists ="Total_Injured_Persons_Pedalcyclists";
 const motorcyclists = "Total_Injured_Persons_Motorcyclists";
@@ -17,6 +18,7 @@ const bus = "Total_Injured_Persons_Bus_Occupants";
 const sectionFooter = document.querySelector("footer");
 sectionLogin.classList.toggle("classShow");
 sectionFooter.classList.toggle("classHidden");
+
 
 btnEnter.addEventListener("click",(e) => {
     e.preventDefault();
@@ -29,18 +31,16 @@ btnEnter.addEventListener("click",(e) => {
           sectionFooter.classList.toggle("classHidden");
           sectionHome.classList.toggle("classShow");
           sectionFilterYear.classList.toggle("classShow");
-          sectionMaximoMinimo.classList.toggle("classShow");
+          sectionSuma.classList.toggle("classShow");
          }
 });
 
 btnSearch.addEventListener("click",()=>{
-    const data = INJURIES;
     let selectYear = document.getElementById("selected_year").value;
     const tableYear= document.getElementById("table_year");
     const arrayFilterYear = window.filterByYear(data, selectYear);
     arrayFilterYear.forEach((i)=>{
         //console.log(i);
-
       tableYear.innerHTML=`<td>Train:</td><td>${i.Total_Injured_Persons_Railroad_Train_Accidents}</td>`
       tableYear.innerHTML+=`<td>Pedalcyclist:</td><td>${i.Total_Injured_Persons_Pedalcyclists}</td>`
       tableYear.innerHTML+=`<td>Motocyclist:</td><td>${i.Total_Injured_Persons_Motorcyclists}</td>`
@@ -52,10 +52,10 @@ btnSearch.addEventListener("click",()=>{
 
 const viewCategory=(idCategory, categoryName)=>{
     document.getElementById(idCategory).classList.toggle("classShow");
-    const dataCategory = window.showCategory(categoryName);
+    const dataCategory = window.showCategory(data,categoryName);
     printYears(dataCategory);
-    //Llamar funcion máximo y mínimo
-    printMaxmin(dataCategory,categoryName);
+    //Llamar función suma
+    printSuma(dataCategory,categoryName);
     const selectOrder = document.getElementById("select_order");
     selectOrder.addEventListener("change",() =>{
         let sortOrder = document.getElementById("select_order").value;
@@ -70,7 +70,6 @@ const viewCategory=(idCategory, categoryName)=>{
 }
 
 
-
 let printYears=(data)=>{
     const tableCategory = document.getElementById("table_category");
     tableCategory.innerHTML = "";
@@ -80,12 +79,12 @@ let printYears=(data)=>{
 }
 
 
-//LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA TRAIN//
+/*LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA TRAIN*/
 
 btnTrain.addEventListener("click",()=>{
   viewCategory("train",train);// seccion HTML , constante con el string
 });
-//LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA PEDALCYCLIST//
+
 btnPedalcyclists.addEventListener("click",()=>{
     document.getElementById("train").classList.toggle("classShow");
     viewCategory("pedalcyclists",pedalcyclists);
@@ -107,11 +106,10 @@ btnBus.addEventListener("click",()=>{
     viewCategory("bus",bus);
 });
 
-// MAximo y minimo //
-let printMaxmin=(data,category)=>{
-    const tableMaxmin = document.getElementById("table_year_maxmin");
+// suma //
+let printSuma=(data,category)=>{
+    const tableSuma = document.getElementById("table_suma");
     let total=window.computeStats(data);
-    tableMaxmin.innerHTML = "";
-    tableMaxmin.innerHTML+= `<td>${category}</td><td>${total}</td>`;
-
+    tableSuma.innerHTML = "";
+    tableSuma.innerHTML+= `<td>${category}</td><td>${total}</td>`;
 }
