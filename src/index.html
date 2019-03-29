@@ -12,6 +12,10 @@
         <figure id="container-logo">
           <img  src="https://i.postimg.cc/pdqgYMRs/Logo-Data-Lovers.png" alt="logo">
         </figure>
+        <figure id="container-user">
+          <img id="user-image" src="https://i.postimg.cc/prbbyY2v/70039.png" alt="usuario">
+        </figure>
+        <label id="name_user"></label>
       </div>
       <nav class="menu">
         <ol>
@@ -38,14 +42,11 @@
           <input id="username" type="text" required >
           <label for="password">Password</label>
           <input id="password" type="password" required>
-          <button id="btn_enter">Enter</button>
+          <button id="btn_enter" class="btn-category">Enter</button>
         </div>
       </form>
     </section>
     <section id="home">
-        <figure id="container-user">
-            <img id="user-image" src="https://i.postimg.cc/prbbyY2v/70039.png" alt="usuario">
-          </figure>
       <label id="name_user"></label>
       <figure>
         <img id="banner"src="https://lfb.org/wp-content/uploads/2016/03/USA2.png" alt="banner">
@@ -55,20 +56,74 @@
         On this page you will find updated information on accidents in the United States of America.
         You can filter by year and category, stay updated and find relevant data to perform a great management in your work</p>
       <div id="botoncitos">
-        <button id="btn_train">Train</button>
-        <button id="btn_pedalcyclists">Pedalcyclists</button>
-        <button id="btn_motocyclists">Motocyclists</button>
-        <button id="btn_car">Car</button>
-        <button id="btn_bus">Bus</button>
+        <button id="btn_train" class="btn-category">Train</button>
+        <button id="btn_pedalcyclists" class="btn-category">Pedalcyclists</button>
+        <button id="btn_motocyclists" class="btn-category">Motocyclists</button>
+        <button id="btn_car" class="btn-category">Car</button>
+        <button id="btn_bus" class="btn-category">Bus</button>
       </div>
-      <div class="table">
-        <select id="select_order" name="order">
-          <option selected value="0"> order </option>
-          <option value="ascendente">Ascendente</option>
-          <option value="descendente">Descendente</option>
-        </select>
+    </section>
+    <section id="train" class="tableInfo">
+      <div class="box-info">
+        <article class="info">
+          <h4> Train Injuries</h4>
+          <p>Train accidents have not been foreign in North American. Although the personnel of the railway companies are trained to deal with this type of accidents, these are still occurring and with deadly consequences.
+            Among the causes we have: new routes, taking the wrong lane, speeding or derailment. </p>
+          <figure>
+              <img class="imagen-category"src="http://www.alraisholidays.com/uploads/4556-train-2-pic.jpg" alt="Dibujo train Accidents" />
+          </figure>
+        </article>
       </div>
-        <table class="tableStructureCategory">
+    </section>
+    <section id="pedalcyclists" class="tableInfo">
+      <article class="info">
+        <h4 class="category-title"> PEDALCYCLIST</h4>
+        <p> The bicycle is an accessible, ecological and beneficial means of transport for health.
+          Its use has increased in recent years, but it is also accidental.
+          A study confirms that these accidents become a combination of inadequate infrastructure and risky behavior on the part of drivers and cyclists.</p>
+        <figure>
+          <img src="http://www.hoycomprare.com/wp-content/uploads/2015/10/accesorios-para-bicicleta.jpg" alt="Dibujo pedalcyclists Accidents" />
+        </figure>
+      </article>
+    </section>
+    <section id="motocyclists"class="tableInfo">
+      <article class="info">
+          <h4 class="category-title">MOTOCYCLIST </h4>
+          <p>Due to the high fuel costs, in recent years the use of motorcycles in the United States has increased, and therefore, accidents in this vehicle have increased.
+            According to the Center for Disease Control, the parts of the body that sustained the most injuries from motorcycle accidents (non-fatal) are: Foot or legs (30%), head / neck (22%). upper part of the trunk (20%), razos or manos (18%) and the lower part of the trunk (8%). </p>
+          <figure>
+              <img src="http://www.revistaturbo.com/sites/default/files/motero.jpg" alt="Dibujo motocyclists Accidents" />
+          </figure>
+      </article>
+    </section>
+    <section id="car"class="tableInfo">
+      <article class="info">
+        <h4 class="category-title"> CAR</h4>
+        <p>Deaths in -or by-cars are an urgent public health concern. It is the second cause of accidental death in the country, after drug overdoses.
+          It is a constant struggle with respect to state legislatures since the necessary measures are not taken to stop the pace of deaths
+        </p>
+        <figure>
+          <img src="https://focus2move.com/wp-content/uploads/2015/10/Ford-F-Series_Super_Duty_2017.jpg" alt="Dibujo car Accidents" />
+        </figure>
+      </article>
+    </section>
+    <section id="bus"class="tableInfo">
+      <article class="info">
+        <h4 class="category-title"> BUS</h4>
+        <p>In the United States, there has been a steady increase in the number of accidents with buses of all kinds over the past 20 years.
+          Among the main causes we have: fatigue of the driver, distracted driver, using some type of electronic device, mechanical failure of some kind or an intoxicated driver, speeding, etc.</p>
+        <figure>
+          <img src="https://www.usabuscharter.net/uploads/6/3/3/9/6339531/646894.jpg?932" alt="Dibujo bus Accidents" />
+        </figure>
+      </article>
+    </section>
+    <div id="select_table_categoria"class="table">
+      <select id="select_order" name="order">
+        <option selected value="0"> order </option>
+        <option value="ascendente">Ascendente</option>
+        <option value="descendente">Descendente</option>
+      </select>
+      <table id="table_structure_category">
         <thead>
           <tr>
             <td>Year</td>
@@ -78,20 +133,20 @@
         <tbody id="table_category" class="dataTable">
         </tbody>
       </table>
-    </section>
+    </div>
     <section id="suma_section" class="slideshow-area">
-      <h3>Total de Accidentes:</h3>
-      <table class="tableStructureYear">
-        <thead>
-          <tr>
-             <td>Categoría</td>
-             <td>Total</td>
-          </tr>
-        </thead>
-        <tbody id="table_suma" class="dataTable">
-        </tbody>
-      </table>
-    </section>
+    <h3>Total de Accidentes:</h3>
+    <table class="tableStructureYear">
+      <thead>
+        <tr>
+           <td>Categoría</td>
+           <td>Total</td>
+        </tr>
+      </thead>
+      <tbody id="table_suma" class="dataTable">
+      </tbody>
+    </table>
+  </section>
     <section id="year_section" class="slideshow-area">
       <h3>Filter:</h3>
       <select id="selected_year" name="year" class="year_button">
@@ -125,7 +180,7 @@
         <option class="year" value="2016">2016</option>
       </select>
       <button class="search_button" id="search" name="visualize_data" value="visualize_data">Search</button>
-      <table class="tableStructureYear">
+      <table id="table-structure-year">
         <thead>
           <tr>
              <td>Year</td>
@@ -135,65 +190,6 @@
         <tbody id="table_year" class="dataTable">
         </tbody>
       </table>
-    </section>
-      <section id="train" class="tableInfo">
-      <label class="subtitles"><strong>Train Injuries</strong></label>
-      <div class="box-info">
-        <article class="info">
-          <h4 class="category-title"> TRAIN</h4>
-          <p>Train accidents have not been foreign in North American. Although the personnel of the railway companies are trained to deal with this type of accidents, these are still occurring and with deadly consequences.
-            Among the causes we have: new routes, taking the wrong lane, speeding or derailment. </p>
-          <figure>
-              <img class="imagen-category"src="http://www.alraisholidays.com/uploads/4556-train-2-pic.jpg" alt="Dibujo train Accidents" />
-          </figure>
-        </article>
-      </div>
-    </section>
-    <section id="pedalcyclists" class="tableInfo">
-      <label class="subtitles"><strong>Pedalcyclists Injuries</strong></label>
-      <article class="info">
-        <h4 class="category-title"> PEDALCYCLIST</h4>
-        <p> The bicycle is an accessible, ecological and beneficial means of transport for health.
-          Its use has increased in recent years, but it is also accidental.
-          A study confirms that these accidents become a combination of inadequate infrastructure and risky behavior on the part of drivers and cyclists.</p>
-        <figure>
-          <img src="http://www.hoycomprare.com/wp-content/uploads/2015/10/accesorios-para-bicicleta.jpg" alt="Dibujo pedalcyclists Accidents" />
-        </figure>
-      </article>
-    </section>
-    <section id="motocyclists"class="tableInfo">
-      <label class="subtitles"><strong>Motocyclists Injuries</strong></label>
-      <article class="info">
-          <h4 class="category-title">MOTOCYCLIST </h4>
-          <p>Due to the high fuel costs, in recent years the use of motorcycles in the United States has increased, and therefore, accidents in this vehicle have increased.
-            According to the Center for Disease Control, the parts of the body that sustained the most injuries from motorcycle accidents (non-fatal) are: Foot or legs (30%), head / neck (22%). upper part of the trunk (20%), razos or manos (18%) and the lower part of the trunk (8%). </p>
-          <figure>
-              <img src="http://www.revistaturbo.com/sites/default/files/motero.jpg" alt="Dibujo motocyclists Accidents" />
-          </figure>
-      </article>
-    </section>
-    <section id="car"class="tableInfo">
-      <label class="subtitles"><strong>Car Injuries</strong></label>
-      <article class="info">
-        <h4 class="category-title"> CAR</h4>
-        <p>Deaths in -or by-cars are an urgent public health concern. It is the second cause of accidental death in the country, after drug overdoses.
-          It is a constant struggle with respect to state legislatures since the necessary measures are not taken to stop the pace of deaths
-        </p>
-        <figure>
-          <img src="https://focus2move.com/wp-content/uploads/2015/10/Ford-F-Series_Super_Duty_2017.jpg" alt="Dibujo car Accidents" />
-        </figure>
-      </article>
-    </section>
-    <section id="bus"class="tableInfo">
-      <label class="subtitles"><strong>Bus Injuries</strong></label>
-      <article class="info">
-        <h4 class="category-title"> BUS</h4>
-        <p>In the United States, there has been a steady increase in the number of accidents with buses of all kinds over the past 20 years.
-          Among the main causes we have: fatigue of the driver, distracted driver, using some type of electronic device, mechanical failure of some kind or an intoxicated driver, speeding, etc.</p>
-        <figure>
-          <img src="https://www.usabuscharter.net/uploads/6/3/3/9/6339531/646894.jpg?932" alt="Dibujo bus Accidents" />
-        </figure>
-      </article>
     </section>
     <section id="galery">
       <figure>

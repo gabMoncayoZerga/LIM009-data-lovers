@@ -1,5 +1,3 @@
-//const data = INJURIES;
-
 const filterByYear = (data,selectYear)=>{
     const dataYear = data.filter(dat=>dat.Year.substr(0,4)===selectYear)
     return dataYear;
@@ -26,13 +24,13 @@ const sortData=(data, sortBy, sortOrder)=> {
       return 0;
     }
   });
-
   if (sortOrder == "A"){
     return listOrdered;
   }else if (sortOrder == "D"){
     return listOrdered.reverse();
   }
 };
+
 
 //calculo
 const computeStats= (data) =>{
