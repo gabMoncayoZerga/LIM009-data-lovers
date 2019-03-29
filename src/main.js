@@ -63,6 +63,21 @@ btnSearch.addEventListener("click",()=>{
       });
     })
 
+const printYears=(data)=>{
+const tableCategory = document.getElementById("table_category");
+tableCategory.innerHTML = "";
+data.forEach(function(a) {
+tableCategory.innerHTML+= `<td>${a.Year}</td><td>${a.Injuries}</td>`;
+    });
+}
+
+const printSuma=(data,category)=>{
+const tableSuma = document.getElementById("table_suma");
+let total=window.computeStats(data);
+tableSuma.innerHTML = "";
+tableSuma.innerHTML+= `<td>${category}</td><td>${total}</td>`;
+}
+
 const viewCategory=(idCategory, categoryName)=>{
     document.getElementById(idCategory).classList.toggle("classShow");
     selectTableCategory.classList.toggle("classShow");
@@ -84,13 +99,7 @@ const viewCategory=(idCategory, categoryName)=>{
     });
 }
 
-let printYears=(data)=>{
-    const tableCategory = document.getElementById("table_category");
-    tableCategory.innerHTML = "";
-    data.forEach(function(a) {
-        tableCategory.innerHTML+= `<td>${a.Year}</td><td>${a.Injuries}</td>`;
-      });
-}
+
 //LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA TRAIN//
 btnTrain.addEventListener("click",()=>{
   viewCategory("train",train);// seccion HTML , constante con el string
@@ -116,11 +125,3 @@ btnBus.addEventListener("click",()=>{
   document.getElementById("car").classList.toggle("classShow");
   viewCategory("bus",bus);
 });
-
-// suma //
-let printSuma=(data,category)=>{
-    const tableSuma = document.getElementById("table_suma");
-    let total=window.computeStats(data);
-    tableSuma.innerHTML = "";
-    tableSuma.innerHTML+= `<td>${category}</td><td>${total}</td>`;
-}
