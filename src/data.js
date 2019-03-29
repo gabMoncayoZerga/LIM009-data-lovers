@@ -8,10 +8,11 @@ const showCategory=(data,category) => {
   data.forEach(function (dat) {
    const value = dat[category]== null ? "Register not found": dat[category];
    const year= dat.Year.substr(0,4);
-    dataCategory.push({Injures:value, Year: year});
+    dataCategory.push({Injuries:value, Year: year});
   });
   return dataCategory;
 }
+
 
 const sortData=(data, sortBy, sortOrder)=> {
   const listOrdered = data.sort(function(a, b){
@@ -29,8 +30,26 @@ const sortData=(data, sortBy, sortOrder)=> {
     return listOrdered.reverse();
   }
 };
-window.filterByYear=filterByYear;
-window.showCategory=showCategory;
+
+
+//calculo
+const computeStats= (data) =>{
+  let arr= [];
+  for (let i = 0; i < data.length; i++) {
+    if(!(data[i].Injuries=='Register not found')){
+      arr.push(data[i].Injuries);
+      }
+  }
+  let suma=0;
+
+  for (let i = 0; i < arr.length; i++) {
+    suma += arr[i];
+  }
+  return suma;
+
+}
+
+window.filterByYear= filterByYear;
+window.showCategory = showCategory;
 window.sortData=sortData;
-
-
+window.computeStats=computeStats;

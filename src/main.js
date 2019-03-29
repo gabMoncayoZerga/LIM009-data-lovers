@@ -1,4 +1,4 @@
-const data = INJURIES;
+const data=INJURIES;
 const btnTrain = document.getElementById("btn_train");
 const btnEnter = document.getElementById("btn_enter");
 const btnPedalcyclists = document.getElementById("btn_pedalcyclists");
@@ -15,34 +15,38 @@ const motorcyclists = "Total_Injured_Persons_Motorcyclists";
 const car ="Total_Injured_Persons_Passenger_Car_Occupants";
 const bus = "Total_Injured_Persons_Bus_Occupants";
 const sectionFooter = document.querySelector("footer");
-const selectTableCategory=document.getElementById("select-table-categoria");
+const selectTableCategory=document.getElementById("select_table_categoria");
 const userImage = document.getElementById("user-image");
 const nameUser = document.getElementById("name_user");
-const tableStructureCategory= document.getElementById("tableStructureCategory");
-const tableStructureYear = document.getElementById("tableStructureYear")
+const tableStructureCategory= document.getElementById("table_structure_category");
+const tableStructureYear = document.getElementById("table-structure-year")
+const sectionSuma= document.getElementById("suma_section");
 sectionLogin.classList.toggle("classShow");
 sectionFooter.classList.toggle("classHidden");
 selectTableCategory.classList.toggle("classHidden");
-// nameUser.classList.toggle("classHidden");
 userImage.classList.toggle("classHidden");
+
 
 btnEnter.addEventListener("click",(e) => {
     e.preventDefault();
     const user = document.getElementById("username").value;
     if (user == ""){
         alert("Please, enter your name");
-    }else{
+
+      } else {
         nameUser.innerHTML = user;
         sectionLogin.classList.toggle("classShow");
         sectionFooter.classList.toggle("classHidden");
         sectionHome.classList.toggle("classShow");
         sectionFilterYear.classList.toggle("classShow");
         userImage.classList.toggle("classShow");
+        sectionSuma.classList.toggle("classShow");
         tableStructureCategory.classList.toggle("classHidden");
         tableStructureYear.classList.toggle("classHidden");
+
          }
     });
-    
+
 btnSearch.addEventListener("click",()=>{
     let selectYear = document.getElementById("selected_year").value;
     const tableYear= document.getElementById("table_year");
@@ -65,7 +69,8 @@ const viewCategory=(idCategory, categoryName)=>{
     tableStructureCategory.classList.toggle("classShow");
     const dataCategory = window.showCategory(data,categoryName);
     printYears(dataCategory);
-
+    //Llamar función suma
+    printSuma(dataCategory,categoryName);
     const selectOrder = document.getElementById("select_order");
     selectOrder.addEventListener("change",() =>{
         let sortOrder = document.getElementById("select_order").value;
@@ -83,14 +88,14 @@ let printYears=(data)=>{
     const tableCategory = document.getElementById("table_category");
     tableCategory.innerHTML = "";
     data.forEach(function(a) {
-        tableCategory.innerHTML+= `<td>${a.Year}</td><td>${a.Injures}</td>`;
+        tableCategory.innerHTML+= `<td>${a.Year}</td><td>${a.Injuries}</td>`;
       });
 }
 //LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA TRAIN//
 btnTrain.addEventListener("click",()=>{
   viewCategory("train",train);// seccion HTML , constante con el string
 });
-//LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA PEDALCYCLIST//
+
 btnPedalcyclists.addEventListener("click",()=>{
   document.getElementById("train").classList.toggle("classShow");
   viewCategory("pedalcyclists",pedalcyclists);
@@ -112,3 +117,10 @@ btnBus.addEventListener("click",()=>{
   viewCategory("bus",bus);
 });
 
+// suma //
+let printSuma=(data,category)=>{
+    const tableSuma = document.getElementById("table_suma");
+    let total=window.computeStats(data);
+    tableSuma.innerHTML = "";
+    tableSuma.innerHTML+= `<td>${category}</td><td>${total}</td>`;
+}
