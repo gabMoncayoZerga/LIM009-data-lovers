@@ -1,22 +1,16 @@
-const data = INJURIES;
-
 const filterByYear = (data,selectYear)=>{
     const dataYear = data.filter(dat=>dat.Year.substr(0,4)===selectYear)
     return dataYear;
   }
 
-
-const showCategory=(category) => {
+const showCategory=(data,category) => {
   let dataCategory = [];
   data.forEach(function (dat) {
    const value = dat[category]== null ? "Register not found": dat[category];
    const year= dat.Year.substr(0,4);
     dataCategory.push({Injures:value, Year: year});
-
-
   });
   return dataCategory;
-
 }
 
 const sortData=(data, sortBy, sortOrder)=> {
@@ -35,3 +29,8 @@ const sortData=(data, sortBy, sortOrder)=> {
     return listOrdered.reverse();
   }
 };
+window.filterByYear=filterByYear;
+window.showCategory=showCategory;
+window.sortData=sortData;
+
+

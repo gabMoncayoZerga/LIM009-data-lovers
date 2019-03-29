@@ -10,6 +10,11 @@ body{
   width: 95%;
   max-width: 500px;
   margin: auto;
+  margin-top: 100px;
+  background-image: url("https://i.postimg.cc/DzwPntm4/bandera-EEUU.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 80%;
 }
 .form-titulo{
   color: black;
@@ -23,6 +28,10 @@ body{
   padding: 10px 30px;
   display: block;
   }
+#btn_enter{
+  margin-left: 38%;
+  margin-right: 38%;
+}
 nav{
   margin-top:1%;
   width:100%;
@@ -37,29 +46,57 @@ nav{
   .menu li{
     display: table-cell;
     padding: 20px;
-    width: 25%;
-    
+    width: 25%; 
   }
-  
+  #user-image{
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    top: 30px;
+    right: 180px;
+  }
+  #name_user{
+    position: absolute;
+    top: 35px;
+  }
 header a{
   color: white;
+  font-size: 22px;
   text-decoration: none;
   }
 h1{
   text-align: center;
 }
-.btnTrain{
-  background-image:url(https://i.postimg.cc/28m9KFs1/trainBtn.png);
+
+.btn-category{
+  font-family:'Playfair Display', serif;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 400;
+  font-size: 15px;
+  color: #ffffff;
+  background-color: #2D3D76;
+  border-radius: 7px;
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 130px;
+  }
+.btn-category:hover{
+  cursor: pointer;
+  background-color: rgb(23, 32, 66);
+  }
+#botoncitos{
+  padding-left: 300px;
+  padding-right: 300px;
 }
 .box-info{
-  width: 1200px;
+  width: 1023px;
   background: #442856;
-  
+  height: 360px;
 }
 .info{
   width: 50%;
-  margin: 10px 20px;
-  padding: 10%;
+  color: white;
 }
 .imagen-category{
   width: 80%;
@@ -70,18 +107,13 @@ h1{
   background-size: 500px 300px;
   
 }
-#botoncitos{
-  margin-left: 39%;
-  margin-right: 39%;
-  margin-bottom: 3%;
-}
 #banner{
 width: 1023px;
 height: 400px;
 margin-left: 12%;
 margin-right: 12%;
 }
-.tableStructureCategory{
+#table_category{
   text-align: center;
   width: 400px;
   border: 1px solid #505050;
@@ -94,7 +126,7 @@ td{
   border: 1px solid #505050;
   padding: 10px;
 }
-.tableStructureYear{
+#table_year{
   text-align: center;
   width: 400px;
   border: 1px solid #505050;
@@ -103,18 +135,7 @@ td{
   border-collapse: collapse;  
   margin: 0 auto;
 }
-#user-image{
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 30px;
-  right: 180px;
-}
-#name_user{
-  position: absolute;
-  top: 35px;
-  left: 1280px;
-}
+
 
 /*ESTILO DE FOOTER */
 footer{
@@ -132,7 +153,6 @@ section{
 .classHidden{
   display:none;
 }
-
 
 .classShow{
   display: inline;
@@ -155,9 +175,4 @@ section{
 label, input{
   width: 100%;
   margin-bottom: 5px;
-}
-#btn_train{
-  background-image: url(https://i.postimg.cc/28m9KFs1/trainBtn.png);
-  background-repeat: no-repeat;
-
 }
