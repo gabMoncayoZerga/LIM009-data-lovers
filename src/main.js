@@ -8,12 +8,12 @@ const sectionLogin = document.getElementById("login");
 const sectionHome = document.getElementById("home");
 const btnSearch = document.getElementById("search");
 const sectionFilterYear= document.getElementById("year_section");
+const sectionMaximoMinimo= document.getElementById("maxmin_section");
 const train = "Total_Injured_Persons_Railroad_Train_Accidents";
 const pedalcyclists ="Total_Injured_Persons_Pedalcyclists";
 const motorcyclists = "Total_Injured_Persons_Motorcyclists";
 const car ="Total_Injured_Persons_Passenger_Car_Occupants";
 const bus = "Total_Injured_Persons_Bus_Occupants";
-const selectYear = document.getElementById("selected_year");
 const sectionFooter = document.querySelector("footer");
 sectionLogin.classList.toggle("classShow");
 sectionFooter.classList.toggle("classHidden");
@@ -29,6 +29,7 @@ btnEnter.addEventListener("click",(e) => {
           sectionFooter.classList.toggle("classHidden");
           sectionHome.classList.toggle("classShow");
           sectionFilterYear.classList.toggle("classShow");
+          sectionMaximoMinimo.classList.toggle("classShow");
          }
 });
 
@@ -36,7 +37,7 @@ btnSearch.addEventListener("click",()=>{
     const data = INJURIES;
     let selectYear = document.getElementById("selected_year").value;
     const tableYear= document.getElementById("table_year");
-    const arrayFilterYear = filterByYear(data, selectYear);
+    const arrayFilterYear = window.filterByYear(data, selectYear);
     arrayFilterYear.forEach((i)=>{
         //console.log(i);
 
@@ -49,33 +50,35 @@ btnSearch.addEventListener("click",()=>{
       });
     })
 
-
 const viewCategory=(idCategory, categoryName)=>{
     document.getElementById(idCategory).classList.toggle("classShow");
-    const dataCategory = showCategory(categoryName);
+    const dataCategory = window.showCategory(categoryName);
     printYears(dataCategory);
-
+    //Llamar funcion máximo y mínimo
+    printMaxmin(dataCategory,categoryName);
     const selectOrder = document.getElementById("select_order");
     selectOrder.addEventListener("change",() =>{
         let sortOrder = document.getElementById("select_order").value;
         let listOrder = []
         if(sortOrder=="ascendente"){
-            listOrder = sortData(dataCategory,"Year","A");
+            listOrder = window.sortData(dataCategory,"Year","A");
         }else if (sortOrder=="descendente"){
-            listOrder =  sortData(dataCategory,"Year","D");
+            listOrder =  window.sortData(dataCategory,"Year","D");
         }
         printYears(listOrder);
     });
 }
 
 
+
 let printYears=(data)=>{
     const tableCategory = document.getElementById("table_category");
     tableCategory.innerHTML = "";
     data.forEach(function(a) {
-        tableCategory.innerHTML+= `<td>${a.Year}</td><td>${a.Injures}</td>`;
+        tableCategory.innerHTML+= `<td>${a.Year}</td><td>${a.Injuries}</td>`;
       });
 }
+
 
 //LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA TRAIN//
 
@@ -103,3 +106,12 @@ btnBus.addEventListener("click",()=>{
     document.getElementById("car").classList.toggle("classShow");
     viewCategory("bus",bus);
 });
+
+// MAximo y minimo //
+let printMaxmin=(data,category)=>{
+    const tableMaxmin = document.getElementById("table_year_maxmin");
+    let total=window.computeStats(data);
+    tableMaxmin.innerHTML = "";
+    tableMaxmin.innerHTML+= `<td>${category}</td><td>${total}</td>`;
+
+}

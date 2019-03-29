@@ -35,7 +35,7 @@
         <h2 class="form-titulo">Sing in</h2>
         <div class="contenedor-inputs">
           <label for="username">User</label>
-          <input id="username" type="text" required>
+          <input id="username" type="text" required value="hola">
           <label for="password">Password</label>
           <input id="password" type="password" required>
           <button id="btn_enter">Enter</button>
@@ -78,7 +78,19 @@
         <tbody id="table_category" class="dataTable">
         </tbody>
       </table>
-
+    </section>
+    <section id="maxmin_section" class="slideshow-area">
+      <h3>Total de Accidentes:</h3>
+      <table class="tableStructureYear">
+        <thead>
+          <tr>
+             <td>Categoría</td>
+             <td>Total</td>
+          </tr>
+        </thead>
+        <tbody id="table_year_maxmin" class="dataTable">
+        </tbody>
+      </table>
     </section>
     <section id="year_section" class="slideshow-area">
       <h3>Filter:</h3>
@@ -124,7 +136,7 @@
         </tbody>
       </table>
     </section>
-    <section id="train" class="tableInfo">
+      <section id="train" class="tableInfo">
       <label class="subtitles"><strong>Train Injuries</strong></label>
       <div class="box-info">
         <article class="info">
