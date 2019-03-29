@@ -3,8 +3,9 @@ global.assert = require('chai').assert;
 require('../src/data/injuries/injuries.js');
 require('../src/data.js');
 
+
 describe('injuries', () => {
-  it('debería de ser un objeto', () => {
-    assert(typeof injuries).equal('object');
+  it('debería ser un objeto', () => {
+    assert.equal(typeof INJURIES, 'object');
   });
 });
