@@ -52,6 +52,7 @@ btnSearch.addEventListener('click', () => {
   nameUser.classList.toggle('classShow');
   tableStructureYear.classList.toggle('classShow');
   const arrayFilterYear = window.filterByYear(data, selectYear);
+  // console.log(window.filterByYear(data, selectYear));
   arrayFilterYear.forEach((i) => {
     tableYear.innerHTML = `<td>Train:</td><td>${i.Total_Injured_Persons_Railroad_Train_Accidents}</td>`;
     tableYear.innerHTML += `<td>Pedalcyclist:</td><td>${i.Total_Injured_Persons_Pedalcyclists}</td>`;
