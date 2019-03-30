@@ -77,13 +77,13 @@ const printSuma = (data, category) => {
   tableSuma.innerHTML += `<td>${category}</td><td>${total}</td>`;
 };
 
-const viewCategory = (idCategory, categoryName) => {
+const viewCategory = (idCategory, categoryName, categoryLabel) => {
   document.getElementById(idCategory).classList.toggle('classShow');
   selectTableCategory.classList.toggle('classShow');
   tableStructureCategory.classList.toggle('classShow');
   const dataCategory = window.showCategory(data, categoryName);
   printYears(dataCategory);
-  printSuma(dataCategory, categoryName);
+  printSuma(dataCategory, categoryLabel);
   const selectOrder = document.getElementById('select_order');
   selectOrder.addEventListener('change', () => {
     let sortOrder = document.getElementById('select_order').value;
@@ -99,26 +99,26 @@ const viewCategory = (idCategory, categoryName) => {
 
 // LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA TRAIN//
 btnTrain.addEventListener('click', () => {
-  viewCategory('train', train);// seccion HTML , constante con el string
+  viewCategory('train', train, 'Train');// seccion HTML , constante con el string
 });
 
 btnPedalcyclists.addEventListener('click', () => {
   document.getElementById('train').classList.toggle('classShow');
-  viewCategory('pedalcyclists', pedalcyclists);
+  viewCategory('pedalcyclists', pedalcyclists, 'Pedalcyclists');
   sectionFilterYear.classList.toggle('classShow');
 });
 
 btnMotorcyclist.addEventListener('click', () => {
   document.getElementById('pedalcyclists').classList.toggle('classShow');
-  viewCategory('motocyclists', motorcyclists);
+  viewCategory('motocyclists', motorcyclists, 'Motorcyclists');
 });
 
 btnCar.addEventListener('click', () => {
   document.getElementById('motocyclists').classList.toggle('classShow');
-  viewCategory('car', car);
+  viewCategory('car', car, 'Car');
 });
 
 btnBus.addEventListener('click', () => {
   document.getElementById('car').classList.toggle('classShow');
-  viewCategory('bus', bus);
+  viewCategory('bus', bus, 'Bus');
 });
