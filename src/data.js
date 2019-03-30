@@ -34,16 +34,12 @@ const sortData = (data, sortBy, sortOrder) => {
 
 
 const computeStats = (data) => {
-  let arr = [];
-  for (let i = 0; i < data.length; i++) {
-    if (!(data[i].Injuries === 'Register not found')) {
-      arr.push(data[i].Injuries);
-    }
-  }
   let suma = 0;
 
-  for (let i = 0; i < arr.length; i++) {
-    suma += arr[i];
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].Injuries !== 'Register not found') {
+      suma += data[i].Injuries;// sumame lo que no sea register not found
+    }
   }
   return suma;
 };
