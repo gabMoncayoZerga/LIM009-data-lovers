@@ -2,7 +2,8 @@ const data = require('../src/data.js');
 require('../src/data/injuries/injuries.js');
 
 describe('injuries', () => {
-      it('is a object', () => {
-        expect(typeof data).toBe('object');
-      });
-    })
+  it('debería ser un objeto', () => {
+    assert.equal(typeof INJURIES, 'object');
+  });
+});
+

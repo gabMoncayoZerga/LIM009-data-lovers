@@ -62,6 +62,7 @@ btnSearch.addEventListener("click",()=>{
       tableYear.innerHTML+=`<td>Bus:</td><td>${i.Total_Injured_Persons_Bus_Occupants}</td>`
       });
     })
+
 const printYears=(data)=>{
   const tableCategory = document.getElementById("table_category");
   tableCategory.innerHTML = "";
@@ -75,7 +76,7 @@ const printSuma=(data,category)=>{
   tableSuma.innerHTML = "";
   tableSuma.innerHTML+= `<td>${category}</td><td>${total}</td>`;
 }
-    
+  
 const viewCategory=(idCategory, categoryName)=>{
   document.getElementById(idCategory).classList.toggle("classShow");
   selectTableCategory.classList.toggle("classShow");
