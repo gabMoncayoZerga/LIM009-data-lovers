@@ -1,4 +1,3 @@
-
 const filterByYear = (data, selectYear) => {
   const dataYear = data.filter(dat => dat.Year.substr(0, 4) === selectYear);
   return dataYear;
@@ -13,7 +12,6 @@ const showCategory = (data, category) => {
   });
   return dataCategory;
 };
-
 
 const sortData = (data, sortBy, sortOrder) => {
   const listOrdered = data.sort(function(prev, next) {
@@ -31,7 +29,6 @@ const sortData = (data, sortBy, sortOrder) => {
     return listOrdered.reverse();
   }
 };
-
 
 const computeStats = (data) => {
   let suma = 0;

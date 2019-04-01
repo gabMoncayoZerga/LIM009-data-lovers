@@ -1,6 +1,6 @@
+
 global.window = global;
 require('../src/data.js');
-
 
 const input = [
   {
@@ -200,3 +200,4 @@ describe('computeStats ', () => {
     expect(window.computeStats(inputCompute)).toEqual(outputCompute);
   });
 });
+
