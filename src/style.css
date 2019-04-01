@@ -30,7 +30,6 @@ body{
   }
 #btn_enter{
   margin-left: 38%;
-  margin-right: 38%;
 }
 nav{
   margin-top:1%;
@@ -51,13 +50,19 @@ nav{
   #user-image{
     width: 46px;
     height: 46px;
-    position: absolute;
-    top: 30px;
-    right: 180px;
+    top: 25px;
+    float: left;
   }
   #name_user{
-    position: absolute;
-    top: 35px;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  #container-logo{
+   display: inline-block;
+  }
+  .prueba{
+    float: right;
+    margin-top: 25px;
   }
 header a{
   color: white;
@@ -66,8 +71,16 @@ header a{
   }
 h1{
   text-align: center;
+  margin: 0;
+  color: #2D3D76;
 }
-
+#p-description{
+  font-size: 22px;
+  padding: 20px;
+  text-align: center;
+  text-align: justify;
+  color: #2D3D76;
+}
 .btn-category{
   font-family:'Playfair Display', serif;
   text-decoration: none;
@@ -86,54 +99,100 @@ h1{
   background-color: rgb(23, 32, 66);
   }
 #botoncitos{
-  padding-left: 300px;
-  padding-right: 300px;
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
 }
 .box-info{
-  width: 1023px;
-  background: #442856;
-  height: 360px;
+  width: 100%;
+  background: #573B68;
+  height: 340px;
 }
-.info{
+h4{
+  text-align: center;
+  color: #ffffff;
+  padding-top: 20px;
+}
+.info p{
   width: 50%;
   color: white;
-}
-.imagen-category{
-  width: 80%;
-  margin-left:50%;
+  padding-top: 20px;
+  padding-left: 30px;
+  display: inline-block;
 }
 .tableInfo{
-  height: 300px;
+  height: 200px;
   background-size: 500px 300px;
-
+}
+.img-category{
+  width: 309px;
+  height: 209px;
+}
+.imgs-category{
+  float: right;
+  display: inline-block;
 }
 #banner{
-width: 1023px;
-height: 400px;
-margin-left: 12%;
-margin-right: 12%;
+  width: 1023px;
+  height: 400px;
+  margin: 0 auto;
+  display: inherit;
 }
-#table_category{
+select {
+  width: 200px;
+  height: 30px;
+  margin: 0;
+  padding: 0 0 0 10px;
+  color: #2D3D76;
+  cursor: pointer;
+  background: #ffffff;
+  font-size: 10px;
+}
+.block-order{
+  width: 50%;
+  margin: 10px auto;
+  
+}
+#select_order{
+  width: 20%;
+}
+
+td{
+  border: 1px solid #2D3D76;
+  padding-top: 5px;
+  font-size: 20px;
+}
+#table_structure_category{
+  width: 50%;
+  display: table;
+  margin: 0 auto;
   text-align: center;
-  width: 400px;
   border: 1px solid #505050;
-  color: #505050;
+  color: #2D3D76;
   background: #50A480;
   border-collapse: collapse;
   margin: 0 auto;
 }
-td{
-  border: 1px solid #505050;
-  padding: 10px;
-}
-#table_year{
-  text-align: center;
-  width: 400px;
-  border: 1px solid #505050;
-  color: #505050;
-  background: #BDA06E;
-  border-collapse: collapse;
+
+#table-structure-year{
+  width: 50%;
+  display: table;
   margin: 0 auto;
+  text-align: center;
+  border: 1px solid #505050;
+  color: #2D3D76;
+  background: #BDA06E;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+h3{
+  text-align: center;
+  color: #2D3D76;
+  font-size: 25px
+}
+.filter-block{
+  margin: 0 auto;
+  width: 50%;
 }
 
 /*ESTILO DE FOOTER */
@@ -141,7 +200,7 @@ footer{
   margin-top:150px;
   width:100%;
   height:100px;
-  background-color:#95a5a6;
+  background-color:#5A5757;
   text-align: center;
   }
 
@@ -152,7 +211,6 @@ section{
 .classHidden{
   display:none;
 }
-
 .classShow{
   display: inline;
 }
@@ -174,4 +232,124 @@ section{
 label, input{
   width: 100%;
   margin-bottom: 5px;
+}
+label{
+  display: inline-block;
+  margin-bottom: 7px;
+}
+
+input{
+  padding: 7px;
+}
+/* responsive */
+@media (max-width:768px) {
+
+  #container-logo{
+    margin: 2%;
+    width: 50%;
+    display: inline-block;
+  }
+  #logo_usa{
+    width: 200px;
+  }
+  #user-image{
+    width: 18px;
+    height: 18px; 
+    float: left;
+  }
+  #name_user{
+    margin-top: 10px;
+    display: inline-block;
+  }
+  .prueba{
+    float: right;
+    margin-top: 10px;
+    font-size: 13px;
+  }
+  #p-description{
+    font-size: 15px;
+    padding: 10px;
+  }
+  .menu ol{
+    display: table;
+    width: 100%;
+    font-size: 10px;
+    padding: 0;
+  }
+  .menu li{
+    display: table-cell;
+    padding: 12px;
+  }
+  nav{
+    margin-top:1%;
+    width:100%;
+    height:50px;
+    background-color:#2D3D76;
+    text-align: center;
+    }
+  header a{
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    }
+  #banner{
+    width: 100%;
+    padding: 0px;
+    margin: 0 auto;
+    display: inherit;
+    height: initial;
+    }
+  #btn_enter{
+    margin: 10px auto;
+    margin-left: 0;
+    width: 108%;
+  }
+  .form-register{
+    width: 95%;
+    max-width: 300px;
+    margin-top: 100px;
+    font-size: 15px;
+    }
+  .form-titulo{
+    color: black;
+    padding-bottom: 10px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 16px;
+    border-bottom: 2px solid black;
+    }
+  p{
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+  }
+  .info p {
+    padding-top: initial;
+    padding-left: initial;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+  }
+  .img-category{
+    width: 209px;
+    height: 109px;
+    }
+  .imgs-category{
+    float: initial;
+    margin: 0 20% 0 20%;
+  }
+  #table_structure_category {
+    width: 85%;
+  }
+  #table-structure-year {
+    width: 85%;
+}
+.block-order{
+  width: 85%;
+  margin: 10px auto;
+  
+}
+#select_order{
+  width: 30%;
+}
 }
