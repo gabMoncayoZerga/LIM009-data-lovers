@@ -99,7 +99,7 @@ const viewCategory = (idCategory, categoryName, categoryLabel) => {
 
 // LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA TRAIN//
 btnTrain.addEventListener('click', () => {
-  viewCategory('train', train, 'Train');// seccion HTML , constante con el string
+  viewCategory('train', train, 'Train');// seccion HTML , constante con el string ,label que quiero mostrar en la tabla
 });
 
 btnPedalcyclists.addEventListener('click', () => {
