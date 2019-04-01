@@ -103,6 +103,8 @@ btnTrain.addEventListener('click', () => {
   document.getElementById('car').classList.toggle('classhidden');
   document.getElementById('bus').classList.toggle('classhidden');
   sectionFilterYear.classList.toggle('classhidden');
+  sectionSuma.classList.toggle('classShow');
+
 });
 
 btnPedalcyclists.addEventListener('click', () => {
@@ -111,6 +113,7 @@ btnPedalcyclists.addEventListener('click', () => {
   document.getElementById('motocyclists').classList.toggle('classhidden');
   document.getElementById('car').classList.toggle('classhidden');
   document.getElementById('bus').classList.toggle('classhidden');
+  sectionSuma.classList.toggle('classShow');
 });
 
 btnMotorcyclist.addEventListener('click', () => {
@@ -119,6 +122,7 @@ btnMotorcyclist.addEventListener('click', () => {
   document.getElementById('train').classList.toggle('classhidden');
   document.getElementById('car').classList.toggle('classhidden');
   document.getElementById('bus').classList.toggle('classhidden');
+  sectionSuma.classList.toggle('classShow');
 });
 
 btnCar.addEventListener('click', () => {
@@ -127,6 +131,7 @@ btnCar.addEventListener('click', () => {
   document.getElementById('motocyclists').classList.toggle('classhidden');
   document.getElementById('car').classList.toggle('classhidden');
   document.getElementById('bus').classList.toggle('classhidden');
+  sectionSuma.classList.toggle('classShow');
 });
 
 btnBus.addEventListener('click', () => {
@@ -135,4 +140,5 @@ btnBus.addEventListener('click', () => {
   document.getElementById('motocyclists').classList.toggle('classhidden');
   document.getElementById('pedalcyclists').classList.toggle('classhidden');
   document.getElementById('motocyclists').classList.toggle('classhidden');
+  sectionSuma.classList.toggle('classShow');
 });
