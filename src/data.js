@@ -34,7 +34,6 @@ const sortData = (data, sortBy, sortOrder) => {
 
 const computeStats = (data) => {
   let suma = 0;
-
   for (let i = 0; i < data.length; i++) {
     if (data[i].Injuries !== 'Register not found') {
       suma += data[i].Injuries;// sumame lo que no sea register not found
