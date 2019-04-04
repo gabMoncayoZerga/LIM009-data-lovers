@@ -60,9 +60,9 @@ DEFINICIÓN DE TERMINADO.- Crearemos una función de ordenado por año en la tab
 
 #### Historia de Usuario 5
 
-Yo como agente de Seguridad y Salud en el trabajo deseo visualizar una galería de los eventos más relevantes en EEUU para prevenir.
+Yo como agente de Seguridad y Salud en el trabajo deseo visualizar el total de heridos por categoría a lo largo de los años.
 
-DEFINICIÓN DE TERMINADO.- Crearemos un section de galería dentro de HTML que fotos con información correspondiente.
+DEFINICIÓN DE TERMINADO.- Crearemos una sección en HTML donde se podrá visualizar una pequeña tabla de dos columnas con los datos solicitado y la funcionalidad correspondiente .
 
 
 ### Síntesis y definición:
@@ -90,7 +90,12 @@ DEFINICIÓN DE TERMINADO.- Crearemos un section de galería dentro de HTML que f
 1) El primer user testing se realizó mostrando un Prototipo de baja fidelidad al usuario. Hubo comprensión de primer momento al recorrer el flujo , pero el feedbback que tenían los usuarios en común era que deseaban ver la data de manera detallada , es decir por categorías en lugar de ser mostrada en su totalidad en una sola vista.
 Ante ello se adicionó 5 botones que permitan filtrar la data por tipo de accidente y que sea mostrada.
 
-2)
+2) En el segundo user testing surgió la observación respecto al LogIn. Si bien al loguearse de principio
+
+3) En el último user testing  se había implementado las modificaciones requeridas, pero
+
+Register not found
+1965	Register not found
 ## Diagrama de Flujo
 
 Se realizó el digrama de flujo del proyecto en la plataforma web Lucidchart.

@@ -1,3 +1,4 @@
+
 const filterByYear = (data, selectYear) => {
   const dataYear = data.filter(dat => dat.Year.substr(0, 4) === selectYear);
   return dataYear;
@@ -13,13 +14,14 @@ const showCategory = (data, category) => {
   return dataCategory;
 };
 
+
 const sortData = (data, sortBy, sortOrder) => {
   const listOrdered = data.sort(function(prev, next) {
-    if (prev[sortBy] > next[sortBy]) {
+    if (prev.sortBy > next.sortBy) {
       return 1;
-    } else if (prev[sortBy] < next[sortBy]) {
+    } else if (prev.sortBy < next.sortBy) {
       return -1;
-    } else if (prev[sortBy] === next[sortBy]) {
+    } else if (prev.sortBy === next.sortBy) {
       return 0;
     }
   });

@@ -161,21 +161,21 @@ describe('INJURIES - global ', () => {
 
 describe('filterByYear ', () => {
   it('debería ser una función', () => {
-    expect(typeof global.filterByYear).toBe('function');
+    expect(typeof window.filterByYear).toBe('function');
   });
   it('debería retornar un tipo de dato objeto', () => {
-    expect(typeof global.filterByYear(input, yearSelect)).toBe('object');
+    expect(typeof window.filterByYear(input, yearSelect)).toBe('object');
   });
   it('debería retorna un array de objeto', () => {
-    expect(global.filterByYear(input, yearSelect)).toEqual(outputFilterYear);
+    expect(window.filterByYear(input, yearSelect)).toEqual(outputFilterYear);
   });
 });
 
 describe('showCategory ', () => {
   it('debería ser una función', () => {
-    expect(typeof showCategory).toBe('function');
+    expect(typeof window.showCategory).toBe('function');
   });
-  it('debería retornar', () => {
+  it('debería retornar los indicadores por categoría', () => {
     expect(window.showCategory(input, 'totalInjuredPersonsRailroadTrainAccidents')).toEqual(outputShowCategory);
   });
 });
@@ -196,8 +196,7 @@ describe('computeStats ', () => {
   it('debería ser una función', () => {
     expect(typeof window.computeStats).toBe('function');
   });
-  it('debería retornar', () => {
+  it('debería retornar la suma por categoría', () => {
     expect(window.computeStats(inputCompute)).toEqual(outputCompute);
   });
 });
-

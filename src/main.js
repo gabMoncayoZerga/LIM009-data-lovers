@@ -21,6 +21,8 @@ const nameUser = document.getElementById('name_user');
 const tableStructureCategory = document.getElementById('table_structure_category');
 const tableStructureYear = document.getElementById('table-structure-year');
 const sectionSuma = document.getElementById('suma_section');
+
+/* ocultando paginas en primera instancia */
 sectionLogin.classList.toggle('classShow');
 sectionFooter.classList.toggle('classHidden');
 selectTableCategory.classList.toggle('classHidden');
@@ -50,6 +52,7 @@ btnSearch.addEventListener('click', () => {
   userImage.classList.toggle('classShow');
   nameUser.classList.toggle('classShow');
   tableStructureYear.classList.toggle('classShow');
+
   const arrayFilterYear = window.filterByYear(data, selectYear);
   // console.log(window.filterByYear(data, selectYear));
   arrayFilterYear.forEach((i) => {
@@ -76,13 +79,14 @@ const printSuma = (data, category) => {
   tableSuma.innerHTML += `<td>${category}</td><td>${total}</td>`;
 };
 
-const viewCategory = (idCategory, categoryName, categoryLabel) => {
+const viewCategory = (idCategory, constName, categoryLabel) => {
   document.getElementById(idCategory).classList.toggle('classShow');
   selectTableCategory.classList.toggle('classShow');
   tableStructureCategory.classList.toggle('classShow');
-  const dataCategory = window.showCategory(data, categoryName);
+  const dataCategory = window.showCategory(data, constName);
   printYears(dataCategory);
   printSuma(dataCategory, categoryLabel);
+  // SORTTTTTTTTTTTTTT//
   const selectOrder = document.getElementById('select_order');
   selectOrder.addEventListener('change', () => {
     let sortOrder = document.getElementById('select_order').value;
