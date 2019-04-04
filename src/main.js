@@ -15,15 +15,17 @@ const motorcyclists = 'Total_Injured_Persons_Motorcyclists';
 const car = 'Total_Injured_Persons_Passenger_Car_Occupants';
 const bus = 'Total_Injured_Persons_Bus_Occupants';
 const sectionFooter = document.querySelector('footer');
+const sectionCategorys = document.getElementById('section_category');
 const selectTableCategory = document.getElementById('select_table_categoria');
 const userImage = document.getElementById('user-image');
 const nameUser = document.getElementById('name_user');
 const tableStructureCategory = document.getElementById('table_structure_category');
 const tableStructureYear = document.getElementById('table-structure-year');
 const sectionSuma = document.getElementById('suma_section');
+
 sectionLogin.classList.toggle('classShow');
 sectionFooter.classList.toggle('classHidden');
-selectTableCategory.classList.toggle('classHidden');
+selectTableCategory.classList.add('classHidden');
 userImage.classList.toggle('classHidden');
 
 btnEnter.addEventListener('click', (enter) => {
@@ -38,9 +40,6 @@ btnEnter.addEventListener('click', (enter) => {
     sectionHome.classList.toggle('classShow');
     sectionFilterYear.classList.toggle('classShow');
     userImage.classList.toggle('classShow');
-    sectionSuma.classList.toggle('classHidden');
-    tableStructureCategory.classList.toggle('classHidden');
-    tableStructureYear.classList.toggle('classShow');
   }
 });
 
@@ -77,9 +76,16 @@ const printSuma = (data, category) => {
 };
 
 const viewCategory = (idCategory, categoryName, categoryLabel) => {
-  document.getElementById(idCategory).classList.toggle('classShow');
-  selectTableCategory.classList.toggle('classShow');
-  tableStructureCategory.classList.toggle('classShow');
+
+  sectionCategorys.querySelectorAll("section").forEach(function(element) {
+    element.classList.remove('classShow');
+  })
+  document.getElementById(idCategory).classList.add('classShow');
+  //console.log(sectionCategorys.querySelectorAll("section"));
+
+  selectTableCategory.classList.remove('classHidden');
+  sectionSuma.classList.add('classShow');
+
   const dataCategory = window.showCategory(data, categoryName);
   printYears(dataCategory);
   printSuma(dataCategory, categoryLabel);
@@ -98,47 +104,20 @@ const viewCategory = (idCategory, categoryName, categoryLabel) => {
 // LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA TRAIN//
 btnTrain.addEventListener('click', () => {
   viewCategory('train', train, 'Train');// seccion HTML , constante con el string
-  document.getElementById('pedalcyclists').classList.toggle('classhidden');
-  document.getElementById('motocyclists').classList.toggle('classhidden');
-  document.getElementById('car').classList.toggle('classhidden');
-  document.getElementById('bus').classList.toggle('classhidden');
-  sectionFilterYear.classList.toggle('classhidden');
-  sectionSuma.classList.toggle('classShow');
-
 });
 
 btnPedalcyclists.addEventListener('click', () => {
   viewCategory('pedalcyclists', pedalcyclists, 'Pedalcyclists');
-  document.getElementById('train').classList.toggle('classhidden');
-  document.getElementById('motocyclists').classList.toggle('classhidden');
-  document.getElementById('car').classList.toggle('classhidden');
-  document.getElementById('bus').classList.toggle('classhidden');
-  sectionSuma.classList.toggle('classShow');
 });
 
 btnMotorcyclist.addEventListener('click', () => {
   viewCategory('motocyclists', motorcyclists, 'Motorcyclists');
-  document.getElementById('pedalcyclists').classList.toggle('classhidden');
-  document.getElementById('train').classList.toggle('classhidden');
-  document.getElementById('car').classList.toggle('classhidden');
-  document.getElementById('bus').classList.toggle('classhidden');
-  sectionSuma.classList.toggle('classShow');
 });
 
 btnCar.addEventListener('click', () => {
   viewCategory('car', car, 'Car');
-  document.getElementById('pedalcyclists').classList.toggle('classhidden');
-  document.getElementById('motocyclists').classList.toggle('classhidden');
-  document.getElementById('car').classList.toggle('classhidden');
-  document.getElementById('bus').classList.toggle('classhidden');
-  sectionSuma.classList.toggle('classShow');
 });
 
 btnBus.addEventListener('click', () => {
   viewCategory('bus', bus, 'Bus');
-  document.getElementById('car').classList.toggle('classhidden');
-  document.getElementById('motocyclists').classList.toggle('classhidden');
-  document.getElementById('pedalcyclists').classList.toggle('classhidden');
-  document.getElementById('motocyclists').classList.toggle('classhidden');
-  sectionSuma.classList.toggle('classShow');
 });

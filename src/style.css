@@ -258,7 +258,8 @@ input{
   #container-logo{
     margin: 2%;
     width: 50%;
-    display: inline-block;
+    display:
+    inline-block;
   }
   #logo_usa{
     width: 200px;
@@ -364,3 +365,4 @@ input{
   width: 30%;
 }
 }
+
