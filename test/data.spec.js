@@ -89,6 +89,10 @@ const inputSortData = [
 
 const outputSortData = [
   {
+    Year: '1965',
+    Injuries: 'Register not found'
+  },
+  {
     Year: '1991',
     Injuries: 82
   },
@@ -99,19 +103,11 @@ const outputSortData = [
   {
     Year: '2007',
     Injuries: 211
-  },
-  {
-    Year: '1965',
-    Injuries: 'Register not found'
   },
 ];
 
 const outputSortDescending = [
   {
-    Year: '1965',
-    Injuries: 'Register not found'
-  },
-  {
     Year: '2007',
     Injuries: 211
   },
@@ -122,6 +118,10 @@ const outputSortDescending = [
   {
     Year: '1991',
     Injuries: 82
+  },
+  {
+    Year: '1965',
+    Injuries: 'Register not found'
   },
 ];
 
@@ -146,7 +146,7 @@ const inputCompute = [
 
 const outputCompute = 431;
 
-describe('Injuries',() => {
+describe('Injuries', () => {
   it('deberia ser un array', () => {
     expect(Array.isArray(['INJURIES'])).toBe(true);
   });
@@ -160,11 +160,7 @@ describe('Injuries',() => {
 
 describe('filterByYear ', () => {
   it('debería ser una función', () => {
-<<<<<<< HEAD
-    expect(typeof window.filterByYear).toBe('function');
-=======
     expect(typeof filterByYear).toBe('function');
->>>>>>> d4cc32b54b21e22f1d184a37aa8fb855872662d6
   });
   it('debería retornar un tipo de dato objeto', () => {
     expect(typeof window.filterByYear(input, yearSelect)).toBe('object');
@@ -176,13 +172,9 @@ describe('filterByYear ', () => {
 
 describe('showCategory ', () => {
   it('debería ser una función', () => {
-    expect(typeof window.showCategory).toBe('function');
+    expect(typeof showCategory).toBe('function');
   });
-<<<<<<< HEAD
-  it('debería retornar los indicadores por categoría', () => {
-=======
   it('debería retornar los datos de una categoria ', () => {
->>>>>>> d4cc32b54b21e22f1d184a37aa8fb855872662d6
     expect(window.showCategory(input, 'totalInjuredPersonsRailroadTrainAccidents')).toEqual(outputShowCategory);
   });
 });
@@ -191,11 +183,11 @@ describe('sortData ', () => {
   it('debería ser una función', () => {
     expect(typeof sortData).toBe('function');
   });
-  it('ordenado ascendente por Injuries ', () => {
-    expect(window.sortData(inputSortData, 'Injuries', 'A')).toEqual(outputSortData);
+  it('ordenado ascendente por Años ', () => {
+    expect(window.sortData(inputSortData, 'Year', 'A')).toEqual(outputSortData);
   });
-  it('ordenado descendente por Injuries ', () => {
-    expect(window.sortData(inputSortData, 'Injuries', 'D')).toEqual(outputSortDescending);
+  it('ordenado descendente por Años ', () => {
+    expect(window.sortData(inputSortData, 'Year', 'D')).toEqual(outputSortDescending);
   });
 });
 
@@ -203,12 +195,7 @@ describe('computeStats ', () => {
   it('debería ser una función', () => {
     expect(typeof computeStats).toBe('function');
   });
-<<<<<<< HEAD
-  it('debería retornar la suma por categoría', () => {
-    expect(window.computeStats(inputCompute)).toEqual(outputCompute);
-=======
   it('debería retornar el total de injuries de una categoria', () => {
     expect(window.computeStats(inputCompute)).toBe(outputCompute);
->>>>>>> d4cc32b54b21e22f1d184a37aa8fb855872662d6
   });
 });

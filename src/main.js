@@ -82,7 +82,6 @@ const viewCategory = (idCategory, categoryName, categoryLabel) => {
   });
   document.getElementById(idCategory).classList.add('classShow');
   // console.log(sectionCategorys.querySelectorAll("section"));
-
   selectTableCategory.classList.remove('classHidden');
   sectionSuma.classList.add('classShow');
 

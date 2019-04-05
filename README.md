@@ -14,11 +14,17 @@ Según un [estudio de IBM](https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?ht
 el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
 Cada día generamos 2.5 trillones de bytes de datos, una cifra sin precedentes.
 
-Transportation Security Administration es una web pensada para uso en el sector público, pero de acceso privado que muestra el número de personas heridas en los accidentes por medio de transporte : tren, bicicleta,motocicleta, auto y bus.
+No obstante, los datos por sí mismos son de poca utilidad. Para que esas grandes cantidades de datos se conviertan en información fácil de leer para los usuarios, necesitamos entender y procesar estos datos.
 
-Cuenta con data anual desde 1960 hasta 2016 y cuenta con una interfaz amigable
+Una manera simple de hacerlo es creando interfaces y visualizaciones.
 
 ## Resumen del proyecto
+
+Transportation Security Administration es una web  para uso en el sector público, pero de acceso privado, que muestra el número de personas heridas en los accidentes por medio de transporte : tren, bicicleta,motocicleta, auto y bus.
+
+Esta web podrá ser utilizada como fuente de información, consulta y como herramienta en  Sector público para iniciar una gestión en la prevención de accidentes en diversos tipos de transporte.
+
+El usuario podrá acceder a data anual desde 1960 hasta 2016 a través de una interfaz amigable
 
 ### Público Objetivo
 
@@ -30,7 +36,22 @@ Gerente de Seguridad de la Alcaldía en EEUU.
 
 ![Descubrimiento](https://i.ibb.co/yRLt4LR/68747470733a2f2f6c68352e676f6f676c6575736572636f6e74656e742e636f6d2f38376b6462483150664b4339413849696b384b73397a33736254677a4b4b7943505f44525548485539462d364654346c715155356341537237664d776f636466424746367a3162.png)
 
-Ya que nuestro usuario final debe residir en EEUU, las entrevistas se realizaron a personas que esten relacionadas con Sector Público y Seguridad y Salud en el trabajo.
+En esta etapa el propósito es identificar las necesidades,investigar y entender a los usuarios,ara ello en esta etapa inicial utilizamos encuestas y entrevistas que aterrizarán en las historias de usuario.
+
+La data escogida para este proyecto fue INJURIES, por lo que el usuario debe residir en EEUU. Ante ello las entrevistas y encuestas se realizaron a colaboradorxs que en su día a día trabajan o tienen acceso a bases de datos .
+
+![Pregunta 1](https://i.ibb.co/cT6MLsn/FIRST.png)
+
+![Pregunta 2](https://i.ibb.co/S0kMhkQ/SECOND.png)
+
+![Pregunta 3](https://i.ibb.co/HdxS3tj/TERCERO.png)
+
+![Pregunta 4](https://i.ibb.co/nLwRTBt/CUARTA.png)
+
+![Pregunta 5](https://i.ibb.co/gtyPtfK/QUINTA.png)
+
+![Pregunta 6](https://i.ibb.co/FgS3P5Q/SEXTA2.png)
+![Pregunta 7](https://i.ibb.co/rHPVtxT/SEPTIMA.png)
 
 #### Historia de Usuario 1
 
@@ -47,9 +68,10 @@ DEFINICIÓN DE TERMINADO.- Implementaremos un botón que permita seleccionar el 
 
 #### Historia de Usuario 3
 
-Yo como gerente de Seguridad de la alcaldia deseo visualizar la cantidad  de heridos de una categorías de todos los años para saber cual fue el año en el que sucedieron el mayor número de heridos.
+Yo como agente de Seguridad y Salud en el trabajo deseo visualizar el total de heridos por categoría a lo largo de los años.
 
-DEFINICIÓN DE TERMINADO.- Crearemos la funcionalidad que permita , a través de un botón, mostrar accidentes por tipo con sus respectivos valores en todos los años brindado por la data.
+DEFINICIÓN DE TERMINADO.- Crearemos una sección en HTML donde se podrá visualizar una pequeña tabla de dos columnas con los datos solicitado y la funcionalidad correspondiente .
+
 
 #### Historia de Usuario 4
 
@@ -60,10 +82,9 @@ DEFINICIÓN DE TERMINADO.- Crearemos una función de ordenado por año en la tab
 
 #### Historia de Usuario 5
 
-Yo como agente de Seguridad y Salud en el trabajo deseo visualizar el total de heridos por categoría a lo largo de los años.
+Yo como gerente de Seguridad de la alcaldia deseo visualizar la cantidad  de heridos de una categorías de todos los años para saber cual fue el año en el que sucedieron el mayor número de heridos.
 
-DEFINICIÓN DE TERMINADO.- Crearemos una sección en HTML donde se podrá visualizar una pequeña tabla de dos columnas con los datos solicitado y la funcionalidad correspondiente .
-
+DEFINICIÓN DE TERMINADO.- Crearemos la funcionalidad que permita , a través de un botón, mostrar accidentes por tipo con sus respectivos valores en todos los años brindado por la data.
 
 ### Síntesis y definición:
 
@@ -80,8 +101,10 @@ DEFINICIÓN DE TERMINADO.- Crearemos una sección en HTML donde se podrá visual
 *Prototipo de baja fidelidad* : fue realizado en sketch, considerando solo dos vistas : logIn(pantalla de inicio)y Home(pantalla donde se muestra la data)
 ![propotipo de baja](https://user-images.githubusercontent.com/47749039/54940932-b90d7180-4ef9-11e9-9f88-a218acc558a6.png)
 
-*Prototipo de alta fidelidad* : se adjuntan los links
-![propotipo de baja](https://user-images.githubusercontent.com/47749039/54941652-62a13280-4efb-11e9-8ca2-7a7eb8602948.png)
+*Prototipo de alta fidelidad* : se adjuntan el link
+![propotipo de alta](https://user-images.githubusercontent.com/47749039/54941652-62a13280-4efb-11e9-8ca2-7a7eb8602948.png)
+
+https://app.zeplin.io/project/5c9a8f94e249f005dc65d42e?seid=5ca1b1147af93805d0d8dcef
 
 ### User Testing:
 
@@ -94,8 +117,7 @@ Ante ello se adicionó 5 botones que permitan filtrar la data por tipo de accide
 
 3) En el último user testing  se había implementado las modificaciones requeridas, pero
 
-Register not found
-1965	Register not found
+
 ## Diagrama de Flujo
 
 Se realizó el digrama de flujo del proyecto en la plataforma web Lucidchart.
