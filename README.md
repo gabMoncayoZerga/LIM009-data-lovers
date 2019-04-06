@@ -41,61 +41,55 @@ Si bien la cantidad de personas que respondieron la encuesta es pequeña , consi
 
 La encuesta nos ayudará a acotar el perfil del usuario final con el que tendremos la entrevista , para poder acceder a información más específica que será aplicada en el planteamiento de la interfaz de nuestra página web.
 
+#### Gráfico # 1 Rango de edad
 
 ![Pregunta 1](https://i.ibb.co/cT6MLsn/FIRST.png)
-
-#### Gráfico # 1 Rango de edad
 
 En el gráfico 1 podemos observar el rango de edad de los encuestados . Es así que cerca del 57.1% de personas encuestadas no es mayor a 36 años ( 23,8% tiene de 25 a 30 años y 33,3% tiene de 31 a 36 años) y se encuentra en la PEA (población economicamente activa).
 Tan solo el 9.5% de los encuestados tiene 50 años a más , pero aún continúan laborando.
 
-
+#### Gráfico # 2 Sexo
 
 ![Pregunta 2](https://i.ibb.co/S0kMhkQ/SECOND.png)
-
-#### Gráfico # 2 Sexo
 
 En el gráfico 2 podemos observar el sexo de los encuestados, representado por porcentajes : 56.3% son mujeres y un 43.8% son hombres. Podemos observar que la diferencia no es muy amplia , lo que nos hace deducir que para ambos sexos el manejo y uso de data en su trabajo es relevante.
 
 
+#### Gráfico # 3
 
 ![Pregunta 3](https://i.ibb.co/HdxS3tj/TERCERO.png)
-
-#### Gráfico # 3
 
 En el gráfico 3 podemos observar el tiempo que nuestros encuestados invierten en internet. El 40.9% de los encuestados pasa de 7-9 horas de su día navegando en internet, cerca tenemos que el 31.8% pasa de 3-5 horas y tan solo el 9.1% pasa de 1-2 horas navegando en la web. Esto nos hace reflexionar que probablemente los colaboradores pasen tanto tiempo en la web buscando información que puedan aplciar en su trabajo. Es así que nace la idea de compilar esa información a través de una web que contenga datos específicos y que aporten valor .
 
 
+#### Gráfico # 4
 
 ![Pregunta 4](https://i.ibb.co/nLwRTBt/CUARTA.png)
-
-#### Gráfico # 4
 
 En el gráfico 4 podemos observar los sectores del mercado en los que laboran nuestrxs encuestadxs. Predomina el secto público con 31.8%
 pertenece al sector público, tanto Seguridad y salud en el trabajo,Manufactura y Ventas con 18.2% y por último Tecnología con 13.6%.
 El resultado de este gráfico nos ayudó a acotar a quien iba a dirigirse nuestra web y en consecuencia el propósito de la misma.
 
 
+#### Gráfico # 5
 
 ![Pregunta 5](https://i.ibb.co/gtyPtfK/QUINTA.png)
-
-#### Gráfico # 5
 
 En el gráfico 5 podemos observar que el 81.8% de encuestados usa en su día a día bases de datos y tan solo el 18.2% no las usa. El que casi la totalidad de encuestados uses bases de datos o acceda a data de alguna manera refleja que puede generarse una necesidad a partir de ello y que los perfiles seleccionados para aplicar la encuesta agregan valor a la propuesta que estamos tratando de generar.
 
 
+#### Gráfico # 6
 
 ![Pregunta 6](https://i.ibb.co/FgS3P5Q/SEXTA2.png)
 
-#### Gráfico # 6
 
 En el gráfico 6 podemos observar que al 86.4% de encuestados les sería útil poder acceder a una web que contenga una base de datos  y tan solo el 13.6% indicó que no .
 Esto nos lleva a reafirmar que crear un producto web con acceso a data es factible y será realmente utilizado por los colaboradores ya que aporta valor y facilita sus tareas en el trabajo.
 
 
-![Pregunta 7](https://i.ibb.co/rHPVtxT/SEPTIMA.png)
-
 #### Gráfico # 7
+
+![Pregunta 7](https://i.ibb.co/rHPVtxT/SEPTIMA.png)
 
 En el gráfico 7 podemos observar los aspectos que son importantes para nuestros encuestadxs en una web.
 -Estética: para el 45,45% de los encuestados la estética no es importante,para el 18.18% la estética si es importante y para el 36.36% es fundamental.
