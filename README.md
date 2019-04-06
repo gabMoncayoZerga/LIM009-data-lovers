@@ -92,11 +92,17 @@ Esto nos lleva a reafirmar que crear un producto web con acceso a data es factib
 ![Pregunta 7](https://i.ibb.co/rHPVtxT/SEPTIMA.png)
 
 En el gráfico 7 podemos observar los aspectos que son importantes para nuestros encuestadxs en una web.
+
 -Estética: para el 45,45% de los encuestados la estética no es importante,para el 18.18% la estética si es importante y para el 36.36% es fundamental.
+
 -Funcionalidad : para el 59.09% de los encuestadxs que la pagina sea funcional es fundamental y para el 40.90% es importante.
+
 -Integración de redes sociales : para el 50% de los encuestadxs que las redes sociales esten presentes en la wen es fundamental, para el 22.72% es importante y para el 27.27% es poco importante.
+
 -Seguridad : para el 63.63% de los encuestadxs que la página sea segura es fundamental , mientras que para el 36.36% es importante.
+
 -Flujo claro y entendible: respecto a que la navegación sea clara , para el 68.18% de nuestrxs encuestadxs es fundamental,27.27% lo considera importante y solo un 4.54% lo considera poco importante.
+
 -Secciones definidas: para el 59.09% de nuestrxs encuestadxs es fundamental tener secciones bien definidas,para el 27.27% es importante y para el 13.63% es poco importante.
 
 
