@@ -36,7 +36,7 @@ const computeStats = (data) => {
   let suma = 0;
   for (let i = 0; i < data.length; i++) {
     if (data[i].Injuries !== 'Register not found') {
-      suma += data[i].Injuries; 
+      suma += data[i].Injuries;
     }
   }
   return suma;
