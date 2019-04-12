@@ -202,6 +202,29 @@ Ante ello se adicionó 5 botones que permitan filtrar la data por tipo de accide
 3) Como parte del CodeReview , surgió la sugerencia de como estabamos presentando el dato "null" de los indicadores y como este se visualizaba la web. Al principio se convirtió el valor "null" a cero  , estando equivocada la interpretación.
 Que el valor de un indicador en un año sea "null" no indica que no hayan existido accidentes , si no más bien que no hubo registros ; por ello en la tabla cambiamos el valor de "0" a "Register not found"( registro no encontrado).
 
+4) Testeo Usuario #1 - 9/04/2019
+
+- Visualizar gráficos mas que tablas
+- Sería bueno ver los accidentes por ciudad o estando
+- Quisiera ver la galería para poner videos,fotos, accidentes,normativa.
+
+5) Testeo Usuario #2 - 10/04/2019
+
+- El texto debe tener más margen, está muy pegado a los colaboradores
+- La letra es muy dificil de leer
+- Las letras en las secciones deben ser mayúsculas
+- La letra del menú desplegable es muy pequeña
+- Azul,morado y verde no es buen contraste
+- Mostrar los datos en infogramas y no tablas
+
+6) Testeo Usuario #1 - 9/04/2019
+
+- Usar gráficos, tablas es aburrido
+- Que al deslizar el mouse aparezca un comentario de porqué tantas muertes
+- La foto no es seria , talvés mostrar accidentes con policía en la imagen
+- Contraste de colores
+- Títulos en mayúsculas
+- Introducción a como loguearse , no sé como usar log in
 
 ## Diagrama de Flujo
 
