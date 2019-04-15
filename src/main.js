@@ -1,27 +1,27 @@
 const data = INJURIES;
-const btnTrain = document.getElementById('btn_train');
-const btnEnter = document.getElementById('btn_enter');
-const btnPedalcyclists = document.getElementById('btn_pedalcyclists');
-const btnMotorcyclist = document.getElementById('btn_motocyclists');
-const btnCar = document.getElementById('btn_car');
-const btnBus = document.getElementById('btn_bus');
+const btnTrain = document.getElementById('btn-train');
+const btnEnter = document.getElementById('btn-enter');
+const btnPedalcyclists = document.getElementById('btn-pedalcyclists');
+const btnMotorcyclist = document.getElementById('btn-motocyclists');
+const btnCar = document.getElementById('btn-car');
+const btnBus = document.getElementById('btn-bus');
 const sectionLogin = document.getElementById('login');
 const sectionHome = document.getElementById('home');
 const btnSearch = document.getElementById('search');
-const sectionFilterYear = document.getElementById('year_section');
+const sectionFilterYear = document.getElementById('year-section');
 const train = 'Total_Injured_Persons_Railroad_Train_Accidents';
 const pedalcyclists = 'Total_Injured_Persons_Pedalcyclists';
 const motorcyclists = 'Total_Injured_Persons_Motorcyclists';
 const car = 'Total_Injured_Persons_Passenger_Car_Occupants';
 const bus = 'Total_Injured_Persons_Bus_Occupants';
 const sectionFooter = document.querySelector('footer');
-const sectionCategorys = document.getElementById('section_category');
-const selectTableCategory = document.getElementById('select_table_categoria');
+const sectionCategorys = document.getElementById('section-category');
+const selectTableCategory = document.getElementById('select-table-categoria');
 const userImage = document.getElementById('user-image');
-const nameUser = document.getElementById('name_user');
+const nameUser = document.getElementById('name-user');
 // const tableStructureCategory = document.getElementById('table_structure_category');
 const tableStructureYear = document.getElementById('table-structure-year');
-const sectionSuma = document.getElementById('suma_section');
+const sectionSuma = document.getElementById('suma-section');
 
 sectionLogin.classList.toggle('classShow');
 sectionFooter.classList.toggle('classHidden');
@@ -44,8 +44,8 @@ btnEnter.addEventListener('click', (enter) => {
 });
 
 btnSearch.addEventListener('click', () => {
-  let selectYear = document.getElementById('selected_year').value;
-  const tableYear = document.getElementById('table_year');
+  let selectYear = document.getElementById('selected-year').value;
+  const tableYear = document.getElementById('table-year');
   userImage.classList.toggle('classShow');
   nameUser.classList.toggle('classShow');
   tableStructureYear.classList.toggle('classShow');
@@ -62,7 +62,7 @@ btnSearch.addEventListener('click', () => {
 });
 
 const printYears = (data) => {
-  const tableCategory = document.getElementById('table_category');
+  const tableCategory = document.getElementById('table-category');
   tableCategory.innerHTML = '';
   data.forEach((ele) => {
     tableCategory.innerHTML += `<td>${ele.Year}</td><td>${ele.Injuries}</td>`;
@@ -70,7 +70,7 @@ const printYears = (data) => {
 };
 
 const printSuma = (data, category) => {
-  const tableSuma = document.getElementById('table_suma');
+  const tableSuma = document.getElementById('table-suma');
   let total = window.computeStats(data);
   tableSuma.innerHTML = '';
   tableSuma.innerHTML += `<td>${category}</td><td>${total}</td>`;
@@ -89,9 +89,9 @@ const viewCategory = (idCategory, categoryName, categoryLabel) => {
   printYears(dataCategory);
   printSuma(dataCategory, categoryLabel);
   // SORTTTTTTTTTTTTTT//
-  const selectOrder = document.getElementById('select_order');
+  const selectOrder = document.getElementById('select-order');
   selectOrder.addEventListener('change', () => {
-    let sortOrder = document.getElementById('select_order').value;
+    let sortOrder = document.getElementById('select-order').value;
     let listOrder = [];
     if (sortOrder === 'ascendente') {
       listOrder = window.sortData(dataCategory, 'Year', 'A');
@@ -100,6 +100,11 @@ const viewCategory = (idCategory, categoryName, categoryLabel) => {
     }
     printYears(listOrder);
   });
+
+  // se genera el grafico
+  window.chartBar('indicator-chart', dataCategory)
+
+
 };
 // LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA TRAIN//
 btnTrain.addEventListener('click', () => {

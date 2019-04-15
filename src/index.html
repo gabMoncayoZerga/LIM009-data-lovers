@@ -42,7 +42,7 @@
         <h2 class="form-titulo">Sign in</h2>
         <div class="contenedor-inputs">
           <label for="username">User</label>
-          <input id="username" type="text" required>
+          <input id="username" type="text" required value="hola mundo">
           <label for="password">Password</label>
           <input id="password" type="password" required>
           <button id="btn-enter" class="btn-category">Enter</button>
@@ -58,11 +58,11 @@
         On this page you will find updated information on accidents in the United States of America.
         You can filter by year and category, stay updated and find relevant data to perform a great management in your work</p>
       <div id="botoncitos">
-        <button id="btn_train" class="btn-category">Train</button>
-        <button id="btn_pedalcyclists" class="btn-category">Pedalcyclists</button>
-        <button id="btn_motocyclists" class="btn-category">Motocyclists</button>
-        <button id="btn_car" class="btn-category">Car</button>
-        <button id="btn_bus" class="btn-category">Bus</button>
+        <button id="btn-train" class="btn-category">Train</button>
+        <button id="btn-pedalcyclists" class="btn-category">Pedalcyclists</button>
+        <button id="btn-motocyclists" class="btn-category">Motocyclists</button>
+        <button id="btn-car" class="btn-category">Car</button>
+        <button id="btn-bus" class="btn-category">Bus</button>
       </div>
     </section>
     <section id= "section-category" class="classShow">
@@ -129,25 +129,33 @@
       </div>
     </section>
     </section>
-    <div id="select-table_categoria" class="table">
-      <div class="block-order">
-      <select id="select-order" name="order">
-        <option selected value="0"> order </option>
-        <option value="ascendente">Ascendente</option>
-        <option value="descendente">Descendente</option>
-      </select>
+    <div class="data-container" style="width: 100%; display: inline-block">
+      <div id="select-table-categoria" class="table" style="width: 30%;float: left">
+        <div class="block-order">
+        <select id="select-order" name="order">
+          <option selected value="0"> order </option>
+          <option value="ascendente">Ascendente</option>
+          <option value="descendente">Descendente</option>
+        </select>
+        </div>
+        <table id="table-structure-category">
+          <thead>
+            <tr>
+              <td>Year</td>
+              <td>Injuries</td>
+            </tr>
+          </thead>
+          <tbody id="table-category" class="dataTable">
+          </tbody>
+        </table>
       </div>
-      <table id="table-structure_category">
-        <thead>
-          <tr>
-            <td>Year</td>
-            <td>Injuries</td>
-          </tr>
-        </thead>
-        <tbody id="table-category" class="dataTable">
-        </tbody>
-      </table>
+
+      <div id="chart-container" style="width: 40%">
+        <canvas id="indicator-chart" ></canvas>
+      </div>
+
     </div>
+
     <section id="suma-section" class="slideshow-area">
     <h3>Total de Accidentes:</h3>
     <table class="tableStructureYear">
@@ -207,10 +215,14 @@
         </tbody>
       </table>
     </section>
+
+
+
+
     <!-- PIE DE PÁGINA -->
      <footer>
-           About us
-           © 2019 LIM009-Datalovers
+          <h4> About us
+           © 2019 LIM009-Datalovers</h4>
            <ul id="social-links">
              <li class="slink"><a href="https://www.facebook.com/USAgov/" target="_blank"><img class="img-icon" alt="facebook" src="https://i.ibb.co/Q8ngNnn/fb2222.png"></a></li>
              <li class="slink"><a href="https://twitter.com/usagov" target="_blank"><img class="img-icon" alt="twitter" src="https://i.ibb.co/tbmrdgM/twitteeer.png"></a></li>
@@ -220,6 +232,8 @@
      </footer>
     <script src="./data/injuries/injuries.js"></script>
     <script src="data.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+    <script src="charts.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
