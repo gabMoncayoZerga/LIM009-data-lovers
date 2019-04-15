@@ -103,8 +103,6 @@ const viewCategory = (idCategory, categoryName, categoryLabel) => {
 
   // se genera el grafico
   window.chartBar('indicator-chart', dataCategory)
-
-
 };
 // LLAMAMOS A LA FUNCION VIEW CATEGORY PARA LA CATEGORIA TRAIN//
 btnTrain.addEventListener('click', () => {

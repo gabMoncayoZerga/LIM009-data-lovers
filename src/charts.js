@@ -1,4 +1,4 @@
-const newChart = (  ,data) =>
+const newChart = (chartId ,data) =>
   let labels = [];
   let values = [];
 
